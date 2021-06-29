@@ -1,0 +1,61 @@
+"""name = input("Enter your name ") # character
+marks = input("Enter your mark: ") # number
+print(name)
+print(marks)
+print(type(name)) # str
+print(type(marks)) # number / int
+print(marks + 10)
+print(name)"""
+
+"""
+
+a = "12345678910"
+print(a[-1:-5])
+
+
+name = "Jean-luc Picard"
+name.lower()
+print(name)
+print(name.lower())
+
+
+name = "Jean-luc Picard   "
+print(name)
+print(len(name.rstrip()))
+print(len(name))
+"""
+"""
+
+STRING PROPEERTIES:
+1. String contains character
+2. string have length
+3. Charactrer in string appear in a sequence
+
+# LENGTH
+len()
+
+print(len("hello"))
+
+
+name2 = input("Enter your name: ")
+print(name2)
+print(len(name2))
+name_length = len(name2)
+print(name_length)
+
+
+
+
+alphnum = "123"
+print(alphnum)
+print(len(alphnum))
+
+'abd'
+"abc"
+
+' '
+" "
+' "
+"""
+
+print("Hello")
