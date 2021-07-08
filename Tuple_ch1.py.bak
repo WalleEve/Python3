@@ -1,0 +1,49 @@
+# Tuples Data Type:
+
+Tuples are Immutable Sequence 
+A Sequence is an ordered list of values. Each element in a sequence is assigned an integer, called an index, that determines the order in which the values appear.
+Just like the string, the index of the first value in a sequence is 0.
+
+What is a Tuple?
+The word tuple comes from mathematics, where it is used to describe
+a finite ordered sequence of values.
+Usually, mathematicians write tuples by listing each element, separated by a comma, inside a pair of parentheses. (1, 2, 3) is a tuple
+containing three integers.
+Tuples are ordered because their elements appear in an ordered fashion. The first element of (1, 2, 3) is 1, the second element is 2, and
+the third is 3.
+
+How to Create a Tuple
+There are a few ways to create a tuple in Python. We will cover two of
+them:
+1. Tuple literals
+2. The tuple() built-in
+
+
+Tuple Literals
+Just like a string literal is a string that is explicitly created by surrounding some text with quotes, a tuple literal is a tuple that is written out
+explicitly as a comma-separated list of values surrounded by parentheses.
+
+>>> my_first_tuple = (1, 2, 3)
+
+You can check that my_first_tuple is a tuple using type():
+>>> type(my_first_tuple)
+<class 'tuple'>
+
+
+Unlike strings, which are sequences of characters, tuples may contain
+any type of value, including values of different types. The tuple (1,
+2.0, "three") is perfectly valid
+
+There is a special tuple that doesn’t contain any values. This tuple is
+called the empty tuple and can be created by typing two parentheses
+without anything between them:
+>>> empty_tuple = ()
+
+We can create a tuple with exactly one element.
+
+>>> x = (1)
+>>>type(x) # class 'int'
+
+>>>x = 1,
+>>>type(x)
+

@@ -1,0 +1,65 @@
+# The Python enumerate() funtion:
+The Python's built-in enumerate() method converts a passed sequene into an enumerate object having the same elements in the form of tuple.
+Further, the function adds index to the corresponding tuple elements.
+
+Syntax: enumerate(thing, start)
+
+-> thing: is any sequnce of which we need to add individual element index.
+-> start(optional): is the starting value with which the indexing would start. if not passed, default value os set to 0.
+
+The Python enumerate() method can convert any iterable sequence into a enumerate object with added indices. This sequence can be a list, string, or tuple. 
+But it is not allowd to be a dictionary or a set, as they are not sequences.
+
+
+# Enumerate a list 
+when we pass a list to the Python enumerate() function, it adds the elementary indices as the first value into the tuple element. The returned iterable is of type enumerate.
+
+To print this enumerate object, we can use a simple for loop traversing through it. 
+Note: This time we can access both the element index and element value at the same time.
+
+list1 = [11, 12, 33, 54]
+enumerate_list = enumerate(list1)
+print("Enumerate list is now looks like: ", list(enumerate_list))
+
+# print the index and corresponding value for enumerate list1 
+for i, item in enumerate(list1):
+	print("Index: ", i, " : ", "value: ",item)
+	
+	
+# Enumerate a String:
+Similarly, we can also use the Python enumerate() method to convert a string into an enumerate object with added indices.
+
+string1 = "AskPython"
+
+enumerate_list = enumerate(string1)
+print("Enumerate list is now looks like: ", list(enumerate_list))
+
+#Print the index and corresponding character for enumerated string 
+for i, item in enumerate(string1):
+	print("Index: ", i, " : ", "character: ", item)
+	
+	
+	
+Python enumerate() with Start parameter
+As mentioned earlier, the start parameter is an optional parameter that determines from which value the indexing would start for the enumerate object returned by the enumerate() method.
+
+Let us look at an example where we try to change the indexing of a list with starting index 0 to a list with starting index 20.	
+
+
+list1 = [ 11, 22, 33, 44]
+
+enumerate_list = enumerate(list1)
+print("Enumerated list now looks like: ", list(enumerate_list))
+
+#without start
+print("Without Start:")
+for i, item in enumerate(list1):
+    print("Index = ", i,"  :  ","value = ",item)
+
+#with start = 20
+print("With Start:")
+for i, item in enumerate(list1, 20):
+    print("Index = ", i,"  :  ","value = ",item)
+	
+	
+	
