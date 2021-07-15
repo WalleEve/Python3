@@ -1338,3 +1338,336 @@ print(a)
 print('a' in a[1])
 print('o' in a[2])
 print(1 in a[0])
+
+
+# LIST:
+cars = ['BMW', 'FORD', 'KIA', 'HONDA', 'MARUTI', 'HYUNDAI', 'AUDI', 'TATA']
+
+print(cars)
+
+cars =  ('BMW', 'FORD', 'KIA', 'HONDA', 'MARUTI', 'HYUNDAI', 'AUDI', 'TATA')
+print(cars)
+
+cars =  'BMW', 'FORD', 'KIA', 'HONDA', 'MARUTI', 'HYUNDAI', 'AUDI', 'TATA'
+print(cars)
+
+# Tuple: Immutable (we can not change the value ) (parentheses)
+1. using comma in between two values  # tuple literals 
+2. tuple()
+
+# LIST:  Mutables (we can chage the value ) [sq bracket] 
+1. list literals 
+2. list() function 
+3. split() function 
+
+
+
+# List Literals:
+
+colors = ["red", "blue", "yellow", "green"]
+print(colors) # List 
+type(colors)
+
+
+
+colors = "red", "blue", "yellow", "green"
+print(colors) # Tuples 
+
+
+colors = ("red", "blue", "yellow", "green")
+print(colors) # Tuples 
+
+colors = "red"
+print(colors)
+
+
+# list() function:
+
+    
+colors = list((1, 2, 3, 4))
+print(colors)
+
+num = 1, 2, 3, 4  # Tuples
+colors = list(num)
+print(colors)
+print(type(list))
+
+
+name  |  age  |  add  | phone  |   marks  |
+
+max     15      BBS     969239     79
+
+a = "name||','||age||','||add ..."
+
+HI, <name>
+Your age is <age>
+and you are from <add>
+your phone number is  <phone>
+You got <marks> in  <subject>
+
+
+name = "LENOVO"
+l = list(name)
+print(l)
+print(type(l))
+
+
+num = 12345 # 
+# nt = tuple(num) # 
+nl = list(num) # TypeError: 'int' object is not iterable
+print(nl)
+print(type(nl))
+
+num = 12345 # 
+nl = list(str(num)) # TypeError: 'int' object is not iterable
+print(nl)
+print(type(nl))
+
+
+# SPLIT () Function :
+    
+"LEN V" 
+"EGG, MILK, CHEESE"
+EGG MILK CHEESE 
+
+
+a = "your phone number is <phone>"
+a_list = a.split(" ")
+print(a_list)
+print(type(a))
+
+a = "egg, milk , cheese ,       ,rice,"
+a_list = a.split(",")
+print(a_list)
+print(type(a_list))
+
+phone = 123456,23452346,234529067 # C1
+phone = 123455, 453634573, 467354735, #C2
+phone = 13534598, 32458298, 342857927, 293452907, # C3
+
+phone1:
+phone2:
+phone3: 
+phone4: 
+    
+phone = "13534598+ 32458298+ 342857927, 29345290+"
+split_list = phone.split("+")
+print(split_list)
+a = split_list[2]
+print(a.split(","))
+print(type(a))
+
+a[1:]
+a[:len(a)]
+
+a = " LENOVO "
+print(len(a))
+a = a[:len(a) - 1]
+print(len(a))
+a = a[1:]
+print(len(a))
+    
+
+string =
+list 
+tuple
+set
+dictionary 
+
+
+a = 1 2 3 4 5 6
+print(a.split(" "))
+
+a = ("1_2_3_4_5_6",)
+print(a) # 
+print(type(a))
+
+print(a[0].split("_"))
+
+
+
+t = 1, 2, 34,5
+a, b, c, d = t
+print(a, b, c, d)
+
+l = [1, 2, 3, 4]
+x, y, z, o = l
+print(x, y, x, o)
+
+t = 'lenovo', 'acer', 'hp', 'dell'
+print(t)
+t2 = t[1]
+print(t2)
+print(type(t2))
+
+t0, t1, t2, t3 = t
+print(t0, t1, t2, t3)
+
+
+
+t0, t1, t2 = t
+print(t0, t1, t2 )  # ValueError: too many values to unpack (expected 3) 
+
+
+# split()
+
+a = "The quick brown fox 10" 
+pl = a.split(' ')
+print(pl)
+print(type(pl))
+x = (pl[-1])
+print(x)
+print(type(x))
+print(x * '10') # + concatinate , * mutiplication string , int , int 
+
+
+a= ['a', 'b']
+a = 'ab'
+list(a)
+a = 'a b'
+a.split(' ')
+
+a = 'abbaabbaccbaffba'
+x = a.split('ba') #  ab, ab,'' /  ab, ab, ba 
+print(x)
+print(len(x[-1]))
+
+if x[-1]:
+    print('hello')
+else:
+    print('Welcome')
+    
+y = x[0:2] 
+print(x)
+
+y = x[0:len(x)-1]
+print(y)
+
+y =x[:-1]
+print(y)
+
+# List Operations:
+    
+number = [1, 2, 3, 4]
+print(number[0])
+print(number[-1]) # 4 / 4
+
+# slice 
+
+
+
+|  1  |   2  |  3  |  4  |
+0     1      2     3
+
+
+
+number = [1, 2, 3, 4]
+print(number[:0]) # 1, 2, 3 / 1, 2, 3  boundry 
+print(number[1:1])
+print(number[1:2])
+print(number[:2])
+print(number[0:])
+print(number[3:])
+print(number[4:1])
+
+
+
+ |  1  |   2  |  3  |  4  |
+ 0     1      2     3
+-4    -3     -2    -1    
+
+print(number[:0])  #[] None  
+print(number[1:-1]) # 1, 4 / 2, 3, 4
+print(number[-1:-4]) # [1, 2, 3]
+print(number[-2:3])   # 3, 4 
+print(number[4:])  # 1, 2, 3, 4 
+print(number[3:])  # 4 
+
+
+# in operator 
+number = [1, 2, 3, 4, 5]
+print(5 in number) # True
+print(6 in number) # False 
+print('5' in number) # True
+
+number = 12345
+print(5 in number) # TypeError: argument of type 'int' is not iterable
+
+number = 12345
+print('5' in str(number))
+
+number = 12345
+print('5' in str(number))
+
+
+# mutable : 
+    
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+    
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+
+
+
+# Accessing Elements in List:
