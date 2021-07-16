@@ -1604,6 +1604,248 @@ print('5' in str(number))
     
 
 
+# how to check if two variables are identical 
+
+== : Comparision 
+id(): indentical function 
+is : operator 
+
+a = "ACER"
+b = a 
+print(a == b) # True
+print(id(a))
+print(id(b))
+print(a is b) # True
+
+a = "LENOVO"
+b = "LENOVO"
+print(a == b) # True
+print(id(a))
+print(id(b))
+print(a is b) # True
+
+Tuple:
+    
+a = ("LENOVO",)
+b = a
+print(a == b) # True
+print(id(a))
+print(id(b))
+print(a is b) # True
+
+
+a = ("LENOVO",)
+b = ("LENOVO",)
+print(a == b) # True
+print(id(a))
+print(id(b))
+print(a is b) # True
+
+# check if the each word in a string begins with capital letter 
+a = 'The Lenovo Store' 
+print(a.istitle()) # True
+
+a = 'The lenovo Store'
+print(a.istitle()) # False
+
+a = 'the lenovo store'
+b = a.title()
+print(b)
+
+
+# check if a string contains a specific substring:
+the in operator will return true if a string contains a substring 
+
+a = "the lenovo store"
+print('lenovo' in a) # True
+print('Lenovo' in a) # False 
+print('len' in a) # True 
+
+
+
+# Find the index of the first occurrence of a substring in a string:
+
+find()
+index()
+
+a = "The worlds fastest car"
+print(a.find('car')) # 19
+print(a.find('s')) # 9
+print(a.find('s', 10)) # 13
+print(a.find('s', 14)) # 16 
+print(a.find('s', 17)) # -1
+
+print(a.find('z')) # -1 
+
+
+print(a.index('car')) # 19
+print(a.index('z')) # ValueError: substring not found
+
+
+
+# Count the total number of character in a string:
+len() function will return the same 
+
+a = "The worlds fastest car"
+print(len(a)) # 22
+
+# count the number of specific character in a string:
+a = "The worlds fastest car"
+print(a.count('s')) # 3
+print(a.count('z')) # 0 
+a = ' '
+print(a.isspace()) # True
+
+
+# What is f string 
+
+a = 'car'
+print('The worlds fastest ' + a) # concatinate 
+
+b = 350
+#print('The worlds fastest ' + a +'its top speed is '+ b) # TypeError: can only concatenate str (not "int") to str
+
+
+print(f'The worlds fastest {a} its top speed is {b} ') # f-string 
+print('The worlds fastest {} its top speed is {} '.format(b, a))
+
+
+# 
+# Changing Elements in a list: 
+    
+#immutable: string , int, tuple 
+#mutable: list  
+  
+car = ['audi', 'bmw', 'honda', 'maruti', 'ford']
+print(car)
+print(car[2]) # 'honda' 
+
+car[2] = 'KIA'
+print(car)
+
+car[4] = 'MITSUBISI'
+print(car)
+
+car[4] = "MAHINDRA", 'MG'
+print(car)
+
+car[6] = "SUZUKI"
+print(car) # IndexError: list assignment index out of range
+ 
+
+print(car[4][1])
+
+
+print(car[2:4]) # 
+
+car[2:4] = ['TATA', 'MAHINDRA', 'HYUNDI']
+print(car)
+
+
+vic = []  
+car = ['audi', 'bmw', 'honda', 'maruti', 'ford']
+vic = car[1] ="TATA"
+print(car)
+print(vic)
+
+
+
+# .insert()
+car = ['audi', 'bmw', 'honda', 'maruti', 'ford']
+car.insert(1, 'TATA')
+print(car)
+
+car.insert(10, 'MG')
+print(car)
+print(car.index('MG'))
+
+car.insert(15, "KIA", 'LUXES','FARRARI') # TypeError: insert expected 2 arguments, got 4
+print(car)
+
+a = "KIA", 'LUXES','FARRARI'
+car.insert(15, a)
+print(car)
+
+ L  E  N  O  V  O
+               -1
+car.insert(-1, 'BUGATI')
+print(car)
+
+car = car.insert(-1, 'LAND ROVER')
+print(car) # None
+
+car = ['audi', 'bmw', 'honda', 'maruti', 'ford']
+vic = car.insert(-1, 'LAND ROVER')
+print(vic) # none 
+
+a = 'lenovo'
+print(a.upper()) # 
+print(a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
 
 
 
