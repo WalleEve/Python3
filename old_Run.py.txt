@@ -1786,6 +1786,196 @@ print(a)
 
 
 
+# f-string: interpolation 
+# fotramt()
+
+a = "easy"
+b = 'exam'
+
+print("The Math {} was so {}".format(b, a))
+
+
+# Check if a string contains only numbers
+# isnumeric() returns the True if all the characters are numeric
+a = "Abcd1234" 
+print(a.isnumeric()) # False 
+
+a = '1234' 
+print(a.isnumeric()) # True 
+
+
+age = input("Please enter your age: ")
+
+flag =  age.isnumeric()
+if flag and age > 18:
+    
+    print("You are eligible to Vote")
+elif flag == False:
+    print("Please enter a valid number")
+   
+
+
+a = '1.4'
+print(a.isnumeric()) # False
+print(a.isdecimal()) # False
+print(a.isdigit()) # False
+
+
+# Split a string on a specific character 
+
+a = "The worlds fasted car"
+
+alist = a.split(" ")
+print(alist)
+print(len(alist))
+
+a1, a2, a3, a4 = alist 
+print(f"\n{a1}\n{a2}\n{a3}\n{a4}")
+
+
+# Checkk if the string is composed of all lower case characters
+#.islower() returns True only if all the character in a string are lower
+a = "lenovo"
+print(a.islower()) # True
+
+a = "Lenovo"
+print(a.islower()) #False
+
+
+a = "lENOVO"
+print(a.istitle())# False
+
+
+print(a[0].islower()) #True
+print(a[0].isupper()) # 
+
+# 
+
+a = ".Lenovo" 
+
+b = ''.join(reversed(a))
+print(b)
+
+a = "Ford"
+b = "car"
+
+c = 'abcd'.join(a)
+print(c)
+
+
+print('acer'.join('lenovo'))
+
+
+a = ('a', 'b', 'c')
+print(''.join(a))
+
+
+
+
+
+
+# JOIN 
+
+
+
+# 
+car = ['ford', 'bmw', 'audi', 'kia']
+
+b ='maruti'
+
+car[0] = b
+print(car) # 
+
+car[-1] = b
+print(car) # 
+
+car = ['ford', 'bmw', 'audi', 'kia']
+b = ['Maruti', 'Honda', 'Hyundi']
+
+car.insert(len(car), b)
+print(car)
+
+
+# The list.pop() method takes one argument as parameter, an index i , and removes the value from the list at that index .
+
+ 
+car = ['ford', 'bmw', 'audi', 'kia']
+print(car.index('kia'))
+
+car.pop(car.index('kia'))
+print(car)
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.pop(car.index('kiaa')) # ValueError: 'kiaa' is not in list
+print(car)
+
+car.pop(car.find('kiaa')) # AttributeError: 'list' object has no attribute 'find'
+print(car) 
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.pop(-1)
+print(car)
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.pop(0)
+print(car)
+
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.pop(0:2)
+print(car)
+
+
+car = ['ford', 'bmw', 'audi', 'kia']
+c = car.insert(10, 'HONDA')
+print(c) # None
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.insert(1, 'HONDA')
+print(car) # None
+
+car = ['ford', 'bmw', 'audi', 'kia']
+c = car.pop(2)
+print(c) # audi
+print(car)
+
+car = ['ford', 'bmw', 'audi', 'kia']
+c = car.pop(5) # IndexError: pop index out of range
+print(c) # audi
+print(car)
+
+car = ['ford', 'bmw', 'audi', 'kia']
+car.pop()
+print(car)
+
+
+
+#remove()
+
+car = ['ford', 'bmw', 'audi', 'kia']
+c = car.remove('kia')
+print(car)
+print(c)
+
+car = ['ford', 'bmw', 'audi', 'kia']
+c = car.pop(3)
+print(car)
+print(c)
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
