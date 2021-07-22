@@ -1963,6 +1963,153 @@ print(car)
 print(c)
 
 
+sentence = "It was a stromy night\nThe house creeked\nThe wind blow"
+print(sentence)
+split_lines = sentence.splitlines()
+print(split_lines)
+
+sentence = "Sally sells sea shells by the sea shore"
+nsent = sentence.replace('sea', 'mountain')
+print(nsent)
+
+
+print(min('string'))
+print(min('ABCDa'))
+
+sentence = "If you want to be a Ninja"
+print(sentence.partition('to'))
+mapping = str.maketrans('abcs', '123S')
+
+print("abc are the first three letters".translate(mapping))
+
+
+a = "ACER"
+print(a.translate("A"))
+
+mydict = {80: 83}
+text = "Hello Sam!"
+print(text.translate(mydict))
+
+# Join 
+a = 'Lenovo'
+print('-'.join(a))#
+
+a = ('acer', 'dell', 'lenovo')
+print('-'.join(a))
+
+
+# splitlines 
+sent = "It was a stromy night\nThe house creeked\nThe wind blow."
+print(sent)
+
+sent = "It was a stromy night \
+The house creeked \
+The wind blow."
+print(sent)
+
+sent = 'It was a stromy night \
+The house creeked \
+The wind blow.'
+print(sent)
+
+sent = """It was a stromy night 
+The house creeked 
+The wind blow."""
+print(sent)
+sent = '''It was a stromy night 
+The house creeked 
+The wind blow.'''
+print(sent)
+
+sent = "It was a stromy night\n The house creeked\n The wind blow."
+print(sent)
+
+sent = "It was a stromy night\nThe house creeked\nThe wind blow."
+print(sent.splitlines())
+print(sent.split(' ')) # 
+
+
+# Replace 
+sentance = 'Sally sells sea shells by the sea shore'
+r_string = sentance.replace('sea', 'mountain' ) # accepts 2 arguments
+print(r_string)
+
+# Replace 
+sentance = 'Sally sells sea shells by the sea shore'
+r_string = sentance.replace('sea', 'mountain', 1 ) # accepts 2 arguments
+print(r_string)
+
+
+# min Returns the minimum character in a string 
+sentance = 'Sally sells sea shells by the sea shore'
+print(min(sentance))
+
+print(min('SallysellsseashellsbytheseashoreA')) # A..z
+
+print(min('string'))
+print(min('1234354'))
+print(min(1234354)) #  'int' object is not iterable  
+
+a = ''
+print(a.isspace())
+
+a = ' z'
+print(a.isspace())
+
+a = ' '
+print(a.isspace())
+
+a = 'Acer\n'
+print(a * 5)  # 
+
+
+a = input("Enter your name: ") # sayed
+a = a + '\n'
+print(a * 10)
+
+a = input("Enter your name: ") # sayed
+print( a * 10 , end=' ' )
+b="ACER"
+print(b)
+
+sentance = 'Sally sells sea shells by the sea shore'
+print(sentance.title())
+
+
+string = "Hello 1 World 2"
+
+vowles = ('a', 'e', 'i', 'o', 'u')
+
+
+a = ''.join([c for c in string if c not in vowles] )
+print(a)
+
+for c in string:
+    #print(c)
+    if c not in vowles:
+        print(c)
+    
+
+
+# 
+user_input = int(input("Enter a number to check if it is even"))
+flag = ('Even' if user_input % 2 == 0 else 'Odd')    
+print(flag)   
+
+user_input = int(input("Enter a number to check if it is even"))
+print ('Even' if user_input % 2 == 0 else 'Odd')    
+
+user_input = int(input("Enter a number to check if it is even"))
+print ('Even' if user_input % 2 == 0 else 'Odd')  
+
+
+
+
+
+
+
+
+
     
     
 
