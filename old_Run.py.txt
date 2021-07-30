@@ -2103,8 +2103,295 @@ user_input = int(input("Enter a number to check if it is even"))
 print ('Even' if user_input % 2 == 0 else 'Odd')  
 
 
+uname = input("enter your name: ")
+tname = tuple(uname)
+print(tname) # (aser,)
 
 
+
+a = 'acer' # string
+Lista = a.split() # 'acer'
+print(Lista)
+print(type(Lista))
+print(tuple(Lista))
+
+
+a = ('a', 'b', 'c')
+b = ('d', 'e', 'f')
+print(a+b)
+print(a * b)
+
+a = (1, 2, 3)
+b = (6,)
+print(a * b)
+
+a = (1, 2, 4)
+b =(5, 6, )
+zipped = zip(a, b)
+print(zipped)
+print(type(zipped))
+print(list(zipped))
+
+
+uname = input("Enter your name: ")
+print(uname)
+print(type(uname))
+tname = tuple(uname.split(','))
+print(tname)
+print(type(tname)) # acer ('acer',) list 
+
+a = "This is a game"
+l = a.split()
+print(l)
+print(type(l))
+
+
+uname = input("Enter your name: ")
+print(uname)
+nname = uname.replace(uname[0], 'K')
+print(nname)
+
+a = 1, 2, 3, 4
+b = 5, 6, 7
+c = a + b
+print(c)
+
+a = 1, 2, 3 # tuples
+b = '4' # str
+print(a + b)
+
+
+
+a = 1, 2, 3, 4
+b = 3,
+print(a * b) # 1,2,3,4, 1,2,3,4 1,2,3,4
+
+a = 'acer'
+b = '3'
+print(a + b) # acer, acer, acer
+
+a = 1, 2, 3, 4
+b = 5, 6, 7, 8
+
+zipped = zip(a, b)
+print(tuple(zipped))
+
+
+a = 1, 2, 3, 4
+b = 5, 6, 7
+
+zipped = zip(a, b)
+print(tuple(zipped))
+
+# List 
+color = ["blue",'white']
+print( color.insert(-1, 'indigo') )
+print(color) #
+
+colors = 'white'
+print(colors.upper())
+print(colors)
+
+
+color = ['blue', 'orange', 'green']
+color = color.pop(3)
+print(color) # IndexError: pop index out of range
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color1 = color.pop()
+print(color1)
+print(type(color1)) # green / blue, orange 
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color1 = color.remove('yellow')
+print(color)
+print(color1)
+
+
+
+
+# list.append()
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color.insert(-1, 'syan')
+print(color) # ['blue', 'orange', 'green', 'yellow', 'red','syan', 'black']
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color.insert(7 ,'syan')
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color.insert(len(color) ,'syan')
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color.append('syan')
+print(color)
+
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+color.insert(len(color) ,'syan', 'pink') # TypeError: insert expected 2 arguments, got 3
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+add_color = ('syan', 'pink')
+color.insert(len(color) ,add_color) # TypeError: insert expected 2 arguments, got 3
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red', 'black']
+add_color = ['syan', 'pink']
+color.append(add_color)
+color.append(['Deep Green', 'Light Green'])
+print(color)
+
+color.extend(['violet', 'ultraviolate'])
+print(color)
+
+
+# 
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+color.append('syan')
+print(color)
+
+color.append(['deep green', 'light green'])
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+a = ['deep green', 'light green']
+for i in a:
+    print(i)
+    color.append(i)
+    print(color)
+    
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+a = 'deep green'
+for i in a:
+    print(i)
+    color.append(i)
+    print(color)
+    
+
+# .extend()   
+
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+color.extend(['light green'])
+print(color)
+  
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+color.extend(['light green', 'deep green', 'pink'])
+print(color)
+
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+color.extend(('light green', 'deep green', 'pink'))
+print(color)
+
+
+List methods:
+    .insert(i, x)  : Insert the value x at index i 
+    .append(x)     : Insert the value x at the end of the list 
+    .extend(x)     : Insert all the values of iterable at the end of the list, in order 
+    .pop(i)        : Remove and return the element at index i 
+    
+    
+index based insert/ assignment 
+color = ['blue', 'orange', 'green', 'yellow', 'red']
+color[1] = 'White' 
+print(color)
+
+remove(x)          : It removes the element from the list, with the matching value 
+
+
+# numeric method for list:
+    
+num = [1, 2, 3, 4, 5]
+
+total = 0 
+for n in num:
+    total += n 
+print(total)
+
+# sum
+num = [1, 2, 3, 4, 5]
+total = sum(num)
+print(total)
+
+num = [1, 2, 3, 4, '5']
+total = sum(num) # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+print(total)
+
+
+umarks = list(int(input("Enter your all marks: "))) # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+total = sum(umarks)
+
+umarks = input("Enter your all marks: ")
+print(umarks)
+print(type(umarks))
+
+t = '35, 45'
+t = int('35, 45')
+
+umarks = input("Enter your all marks: ")
+
+nlist = umarks.split(',')
+print(nlist)
+
+in_list =[] # Empty list 
+
+for i in nlist:
+    in_list.append(int(i))
+    print(in_list)
+
+print(sum(in_list))
+
+
+# min()
+
+a = [23, 45, 76]
+print(min(a)) # 
+
+num1 = input("Enter numeric value: ")
+
+numlist = num1.split(',')
+
+em_list = []
+
+for i in numlist:
+    em_list.append(int(i))
+
+print(min(em_list))
+
+
+
+
+# max() 
+a = [23, 45, 76]
+print(max(a)) # 
+
+num1 = input("Enter numeric value: ")
+
+numlist = num1.split(',')
+
+em_list = []
+
+for i in numlist:
+    em_list.append(int(i))
+
+print(max(em_list))
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
