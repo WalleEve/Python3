@@ -112,6 +112,7 @@ For example, you want to find the first “apple” in a list of fruit. Use the 
 fruit = ['pear', 'orange', 'apple', 'grapefruit', 'apple', 'pear']
 fruit.index('apple') #=> 2
 fruit.index('pear') #=> 0
+
 12. Remove all elements from a list
 Rather than creating a new empty list, we can clear the elements from an existing list with .clear().
 fruit = ['pear', 'orange', 'apple']
@@ -127,6 +128,7 @@ print( id(fruit) ) #=> 4581166792
 del fruit[:]
 print( fruit )     #=> []
 print( id(fruit) ) #=> 4581166792
+
 13. Iterate over both the values in a list and their indices
 enumerate() adds a counter to the list passed as an argument.
 Below we iterate over the list and pass both value and index into string interpolation.
@@ -147,6 +149,7 @@ Below we return a new list with 1 added to every element.
 li = [0,25,50,100]
 [i+1 for i in li] 
 #=> [1, 26, 51, 101]
+
 16. Count the occurrence of a specific object in a list
 The count() method returns the number of occurrences of a specific object. Below we return the number of times the string, “fish” exists in a list called pets.
 pets = ['dog','cat','fish','fish','cat']
