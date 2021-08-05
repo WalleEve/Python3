@@ -2379,9 +2379,678 @@ for i in numlist:
 print(max(em_list))
 
 
+numbers = (1, 2, 3, 4, 5)
+sqares = [num ** 2 for num in numbers]
+print(sqares)
+
+str_numbers = ["1.5", "2.3", "5.25"]
+float_numbers = [float(values) for values in str_numbers]
+print(float_numbers)
+
+
+import random 
+
+someWords = """ apple banana mango straberry oracle grape
+pineapple appricot lenom coconut watermelon cherry papaya berry peach lychee muskmelon"""
+
+someWords = someWords.split()
+print(someWords)
+
+word = random.choices(someWords)
+#print(word)
+
+
+str_word = word[0]
+print(len(str_word))
+guess_print = ('_ ' * len(str_word))
+print('Guess the word! HINT: word is a name of a fruit')
+print(guess_print)
 
     
+ # index based insert/replace
+.insert()
+.pop()
+.remove()
+.append()
+.extend()
+sum()
+min()
+max()
+
+# LIST COMPREHENSIONS:
+
+Another way to create a list from an existing iterable 
+
+numbers = (1, 2, 3, 4, 5)
+sqares = (i for i in numbers)
+print(sqares) # object
+print(list(sqares))
+print(tuple(sqares))
+print(str(sqares))
+
+
+numbers = (1, 2, 3, 4, 5)
+sqares = (i ** 2 for i in numbers)
+print(list(sqares))
+
+
+# using For loop:
     
+numbers = (1, 2, 3, 4, 5)
+
+sqares = []
+
+for i in numbers:
+    sqares.append(i ** 2)
+print(sqares)
+
+
+str_numbers = ["1.5", "2.3", "5.25"]
+float_numbers = [float(values) for values in str_numbers]
+print(float_numbers)
+
+
+str_numbers = ["1.5", "2.3", "5.25"]
+float_numbers = (float(values) for values in str_numbers)
+print(list(float_numbers))
+
+
+
+# Nesting, Copying and Sorting Tuple and List:
+    
+1. Nesting: 
+two_by_two = [[1, 2], [3, 4]]
+print(len(two_by_two))
+
+print(two_by_two[0])
+print(two_by_two[1])
+
+print(two_by_two[1][0])
+
+
+2. Copying a List 
+
+animals = ["lion", "tiger", "puma"]
+large_cats = animals 
+print(large_cat)
+print(animals)
+
+large_cat.append("Cheeta")
+
+print(animals)
+print(large_cats)
+
+
+animals = ["lion", "tiger", "jaguar"]
+large_cats = animals[:]
+large_cats.append("cheeta")
+
+print(animals)
+print(large_cats)
+
+
+
+matrix1 = [[1, 2], [3, 4]]
+matrix2 = matrix1[:]
+
+matrix2[0] = [5, 6]
+
+print(matrix2)
+print(matrix1)
+
+
+matrix2[1][0] = 1 
+print(matrix2)
+print(matrix1)
+
+# shallow copy 
+
+
+List:
+insert
+append 
+extend 
+pop
+remove 
+
+sum 
+min 
+max 
+
+# List Comprehensions 
+
+numbers = (1, 2, 3, 4, 5)
+print(numbers)
+print(type(numbers))
+
+list_nums = list(numbers)
+print(list_nums)
+print(type(list_nums))
+
+
+
+numbers = (1, 2, 3, 4, 5)
+
+list_num = list(numbers) # not requires 
+emp_list_num = []
+
+for i in list_num:
+    emp_list_num.append(int(i ** 2))
+    
+print(emp_list_num)
+
+
+numbers = (1, 2, 3, 4, 5)
+
+list_numbers = (i ** 2 for i in numbers)
+print(list(list_numbers)) # object 
+
+list_numbers = [i ** 2 for i in numbers]
+print(list_numbers)
+
+
+st = "123456"
+list_st = [int(i) ** 2 for i in st]
+print(list_st)
+
+
+
+
+
+
+
+
+# NESTING: TUPLE / LIST / DIC / SET 
+
+t1 = ('acer', 12345, (1,  3, 2, 4, ('a', 'b'), 5 ), 6 ) # index based 
+print(type(t1))
+
+print(t1[0])
+print(type(t1[0]))
+
+print(t1[1])
+print(type(t1[1]))
+
+print(t1[2])
+print(type(t1[2]))
+
+print(t1[2][4][0])
+print(type(t1[2][4][0])) # t1 > (1,  3, 2, 4, ('a', 'b'), 5 ) > ('a', 'b') > 'a'
+
+
+matrix: 
+    [1 1 1
+     1 1 1
+     1 1 1]
+matrix = [[1, 1, 1],
+          [2, 2, 2],
+          [3, 3, 3]]
+
+print(matrix) 
+print(matrix[0][0]) 
+
+
+# Copying a List 
+
+a = 'acer'
+b = a 
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+b = 'Lenovo'
+print(f"a: {a}")
+print(f"b: {b}")
+print(id(a))
+print(id(b))
+
+a = "Acer"
+b = "Acer"
+
+print(f"a: {a}")
+print(f"b: {b}")
+print(id(a))
+print(id(b))
+
+
+
+a = ('a', 'b', 'c')
+b = a 
+
+print(f"a: {a}")
+print(f"b: {b}")
+print(id(a))
+print(id(b))
+
+
+a = ('a', 'b', 'c')
+b = ('a', 'b', 'c')
+
+print(f"a: {a}")
+print(f"b: {b}")
+print(id(a))
+print(id(b))
+
+
+car = ["audi", "bmw", "honda"]
+new_car = car 
+
+print(f"car: {car}")
+print(f"new_car: {new_car}")
+print(id(car))
+print(id(new_car))
+
+new_car.append("toyota")
+print(f"car: {car}")
+print(f"new_car: {new_car}")
+print(id(car))
+print(id(new_car))
+
+
+car = ["audi", "bmw", "honda"]
+new_car = car[:] 
+
+new_car.append("toyota")
+
+print(f"car: {car}")
+print(f"new_car: {new_car}")
+print(id(car))
+print(id(new_car))
+
+
+matrix1 = [[1, 2],
+           [3, 4]]
+
+matrix2 = matrix1[:]
+
+
+print(f"matrix1: {matrix1}")
+print(f"matrix2: {matrix2}")
+print(id(matrix1))
+print(id(matrix2))
+
+
+matrix1 = [[1, 2],
+           [3, 4]]
+
+matrix2 = matrix1[:]
+
+matrix2[0] = [5, 6]
+print(f"matrix1: {matrix1}")
+print(f"matrix2: {matrix2}")
+print(id(matrix1))
+print(id(matrix2))
+
+
+
+matrix1 = [[1, 2],
+           [3, 4]]
+
+matrix2 = matrix1[:]
+
+matrix2[1][0] = 7 
+print(f"matrix1: {matrix1}")
+print(f"matrix2: {matrix2}")
+print(id(matrix1))
+print(id(matrix2))
+
+# Shallow Copy 
+
+
+# deep copy 
+
+import : Keyword 
+
+import keyword
+print(keyword.kwlist)
+
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+
+
+import copy # module  method 
+
+matrix1 = [[1, 2],
+           [3, 4]]
+
+matrix2 = copy.deepcopy(matrix1)
+
+matrix2[1][0] = 7 
+print(f"matrix1: {matrix1}")
+print(f"matrix2: {matrix2}")
+print(id(matrix1))
+print(id(matrix2))
+
+
+# Deleting Item from a list:
+car = ["bmw", "audi", "tata", 'kia', 'mg', 'gm', 'ford']
+
+# using .pop()
+
+print(car)
+car.pop(0) # "bmw"
+print(car)
+
+# using .remove() 
+
+car.remove('mg') # "mg"
+print(car)
+
+# using del()
+
+del car[1] # "tata"
+print(car) 
+
+car = ["bmw", "audi", "tata", 'kia', 'mg', 'gm', 'ford']
+del car[3:6]
+print(car)
+
+
+
+a= '123456789101112131415161718'
+print(a[::5])
+
+def get_second_element(item):
+    return item[1]
+
+item = [(4, 1), (1, 2), (-9, 0)]
+
+get_second_element(item)
+
+item.sort(key=get_second_element)
+print(item)
+
+item = [(3, 6), (2, 4), (9, 5), (8, 0)]
+get_second_element(item)
+item.sort(key=get_second_element)
+print(item)
+
+
+
+color = ["red", "blue", "green"]
+short_color = color.sort()
+print(short_color) # None 
+
+
+print(color)
+
+
+
+
+print(id(1)) # 140724648617776
+print(id(2)) # 140724648617808 
+
+lst = [1, 2, 3, 4]
+print(id(lst)) # 2544983239232
+
+print(id(lst[0])) # 140724648617776
+print(id(lst[1])) # 140724648617808 
+
+print(id(lst[2])) # 140724648617840
+
+print(id(3)) # 140724648617840 
+
+a = 3 
+print(id(a)) # 140724648617840   
+
+
+.Nesting
+.Copying 
+.Sorting 
+
+
+car = ["bmw", "audi", "ford", "kia", "tata"]
+
+# remove from list based on index [2] 
+
+car.pop(2) # ford
+
+# remove from list based on string/value  # tata
+
+car.remove("tata") 
+
+print(car) #
+
+
+car = ["bmw", "audi", "ford", "kia", "tata", "hyundai", "toyota"]
+
+# del  # index based 
+
+del car[3:5] 
+print(car)
+
+del car[1]
+print(car)
+
+
+
+# 
+
+a = 10  # int
+
+print(id(a))  140724648618064
+
+b = 10, # tuples 
+print(id(b)) # 2544982180992
+
+print(id(b[0]))  140724648618064
+
+
+
+b = (10, 20) # tuple 
+
+print(id(b))  # 
+
+
+
+
+
+
+c = [10, 20, 30] # list 
+
+print(id(c[0])) 140724648618064
+
+
+
+
+# Sorting: 
+    
+
+a = [1, 3, 5, 7] 
+b = [7, 1, 8, 3, 6] 
+
+b.sort()
+print(b)
+
+
+c = [3, 12, 87, 2, 4]
+
+print(b)
+print(c)
+
+b.sort(reverse = True)
+print(b)
+
+
+b.sort(reverse = False)
+print(b)
+
+
+.sort(key) # 
+
+def get_second_number(uma):
+    return uma[2]
+
+a = [4, 1, 5, 3, 7, 8]
+
+get_second_number(a)
+
+
+def get_second_number(lst):
+    return lst[1]
+
+a = [(4, 9), (5, 6), (7, 1)]
+a.sort(key=get_second_number)
+print(a)
+
+
+def get_second_number(lst):
+    return lst[0]
+
+a = [(9, 3), (5, 6), (1, 8)]
+a.sort(key=get_second_number)
+print(a)
+
+
+
+1. Check if a list contains an element
+
+top_car = ["audi", "bmw", "ford", "toyota", "tata"]
+
+b = "tata" 
+
+print(b in top_car)
+
+
+2. How to iterate over 2+ lists at the same time
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+price = [10000, 34355, 35432, 34657, 345243]
+year = [1998, 1987, 1881, 1984, 1973]
+
+a = zip(car, price, year)
+for car, price, year in a:
+    print(f"Top car brand {car} and its base Price {price} manufacturing year {year}")
+
+
+a = (10, 20)
+
+b, c = a 
+print(b, c)
+
+4. Is a list mutable? 
+
+car = ["bmw", "audi"]
+car[0]="ford"
+print(car)
+
+5. Does a list need to be homogeneous? 
+
+a = ["audi", 1234, ["bmw", 4567], ("tata", "1234")]
+print(a)
+
+6. What is the difference between append and extend?
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+print(car)
+car.append("mahindra")
+print(car)
+
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+print(car)
+car.extend("mahindra")
+print(car)
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+t = ["mahindra"]
+car.extend(t)
+print(car)
+
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+print(car)
+car.append(("mahindra", "kia"))
+print(car)
+car.append(["mahindra", "kia"])
+print(car)
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+print(car)
+car.extend("mahindra")
+print(car)
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+t = ("mahindra", "kia")
+car.extend(t)
+print(car)
+
+car = ["audi", "bmw", "ford", "toyota", "tata"]
+t = ["mahindra", "kia"]
+car.extend(t)
+print(car)
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
     
     
     
