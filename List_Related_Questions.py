@@ -221,6 +221,7 @@ But note it counts top level objects, so a nested list of several integers will 
 li = [[1,2],[3,4,5]]
 len(li)
 #=> 2
+
 23. What is the difference between a list and a set?
 While a list is ordered, a set is not. That’s why using set to find unique values in a list, like list( set([3, 3, 2, 1]) ) loses the order.
 While lists are often used to track order, sets are often used to track existence.
@@ -230,6 +231,7 @@ For this we use the in operator, but prefix it with not.
 li = [1,2,3,4]
 5 not in li #=> True
 4 not in li #=> False
+
 25. Multiply every element in a list by 5 with the map function
 .map() allows iterating over a sequence and updating each value with another function.
 map() returns a map object but I’ve wrapped it with a list comprehension so we can see the updated values.
@@ -243,12 +245,14 @@ zip() combines multiple sequences into an iterator of tuples, where values at th
 alphabet = ['a', 'b', 'c']
 integers = [1, 2, 3]
 list(zip(alphabet, integers))
+
 27. Insert a value at a specific index in an existing list
 The insert() method takes an object to insert and the index to insert it at.
 li = ['a','b','c','d','e']
 li.insert(2, 'HERE')
 li #=> ['a', 'b', 'HERE', 'c', 'd', 'e']
 Note that the element previously at the specified index is shifted to the right, not overwritten.
+
 28. Subtract values in a list from the first element with the reduce function
 reduce() needs to be imported from functools.
 Given a function, reduce iterates over a sequence and calls the function on every element. The output from the previous element is passed as an argument when calling the function on the next element.

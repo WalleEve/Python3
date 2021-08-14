@@ -3146,8 +3146,562 @@ car = ["BMW", "AUDI", "FORD", "TATA", "BMW", "AUDI", "BMW"]
 c= [ ind for ind, val in  enumerate(car) if val == "BMW"]
 print(c)
 
+
+
+
+17. How to shallow copy a list? 
+
+a = [1, 2, 3, 4, 5]
+b = a 
+
+print(a)
+print(b)
+
+b[1] = 6
+print(a)
+print(b) # copy 
+
+print(id(a))
+print(id(b))
+.copy()
+
+a = [1, 2, 3, [4, 5]]
+b = a.copy()
+b[3][0] = 6
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+18. Why create a shallow copy of a list? 
+
+when we need a copy of reference number 
+
+
+19. How to deep copy a list? 
+
+import copy 
+a = [1, 2, 3, [4, 5]]
+b = copy.deepcopy(a)
+b[3][0] = 6
+print(a)
+print(b)
+print(id(a))
+print(id(b))
+
+20. What is the difference between a deep copy and a shallow copy?
+
+a = [1, 2, 3, 4, 5]
+b = a 
+print(a)
+print(b)
+
+b.pop(-1)
+print(f"B: {b}")
+
+print(f"A: {a}")
+
+print(id(a))
+print(id(b))
+
+2027048158208
+2027048158208
+
+
+# .copy()
+
+a = [1, 2, 3, 4, 5]
+b = a.copy() 
+
+print(f"B: {b}")
+print(f"A: {a}")
+
+b.pop(-1)
+print(f"B: {b}")
+print(f"A: {a}")
+
+print(id(a))
+print(id(b))
+
+
+
+a = [1, 2, 3, [4, 5], 6]
+b = a.copy() 
+
+print(f"A: {a}")
+print(f"B: {b}")
+
+b[3][0] = 7 
+
+print(f"B: {b}")
+print(f"A: {a}")
+
+print(id(a))
+print(id(b))
+
+2027044764928
+2027048063424
+
+
+import copy
+
+a = [1, 2, 3, [4, 5], 6]
+
+b = copy.deepcopy(a) 
+
+print(f"A: {a}")
+print(f"B: {b}")
+
+b[3][0] = 7 
+
+print(f"B: {b}")
+print(f"A: {a}")
+
+print(id(a))
+print(id(b))
+
+2027048144256
+2027048094464
+
+
+21. What is the difference between a list and a tuple. 
+
+Tuple : (,) [, compulsory]
+
+a = ("uma",)
+print(a)
+print(type(a))
+
+a = "uma",
+print(a)
+print(type(a))
+
+a = 123,
+print(a)
+print(type(a))
+
+a = (1, 2, 3)
+print(a)
+print(type(a))
+
+Tuple: immutable [we can not change the value of immutable data type]
+
+
+List = []
+a = [1]
+print(a)
+print(type(a))
+List : mutable [we can  change the value of immutable data type]
+
+
+22. Return the length of a list
+
+
+a = [1, 2, 3, [4, 5], 6]
+print(len(a))
+ 
+
+25. Multiply every element in a list by 5 with the map function
+
+map(fn, a)
+
+def multiply_by5(val):
+    return val * 5
+
+
+a = [10, 20, 30, 40, 50]
+
+multiply_by5(10)
+
+res_list = []
+for i in a:
+    res_list.append(multiply_by5(i))
+    
+print(res_list, end=' ')
     
 
+def multiply_by5(val):
+    return val * 5
+
+
+a = [10, 20, 30, 40, 50]
+print([val for val in map( multiply_by5, a)])
+
+
+26. Combine 2 lists into a list of tuples with the zip function
+
+a = [1, 2, 3, 4, 5]
+b = ['a', 'b', 'c', 'd', 'e']
+
+res = zip(a, b)
+print(res)
+print(type(res))
+
+print(list(res))
+
+a = [1, 2, 3, 4]
+b = ['a', 'b', 'c', 'd', 'e']
+
+res = zip(a, b)
+print(list(res))
+
+    
+a = [1, 2, 3, 4]
+b = ['a', 'b', 'c', 'd', 'e']
+c = ["acer", "lenovo", "dell"]
+
+res = zip(a, b, c)
+print(list(res))  
+    
+a = [1, 2, 3, 1, 5, 3, 1]
+
+dup = [i[1] for i in enumerate(a) if a.count(i[1]) > 1]
+print(set(dup))
+
+c = a.count(1)
+print(c)
+
+27. Insert a value at a specific index in an existing list
+
+car = ["BMW", "AUDI", "KIA", "FORD"]
+car.insert(2, "TATA")
+
+print(car) # ["BMW", "AUDI", "TATA", "KIA", "FORD"]
+
+car = ["BMW", "AUDI", "KIA", "FORD"]
+car[2] = "TATA"
+
+print(car) # ["BMW", "AUDI", "TATA", "FORD"]
+
+
+car = ["BMW", "AUDI", "KIA", "FORD"]
+car.insert(8, "TATA")
+print(car)
+
+car = ["BMW", "AUDI", "KIA", "FORD"]
+car.append("TATA")
+print(car)
+
+28. Subtract values in a list from the first element with the reduce function
+
+
+import functools
+
+car = ["BMW", "AUDI", "KIA", "FORD"]
+
+
+print(dir(functools))
+
+
+import Roll_Dice
+print(dir(Roll_Dice))
+
+Roll_Dice.d5()
+
+
+
+
+universities = [
+['California Institute of Technology', 2175, 37704],
+['Harvard', 19627, 39849],
+['Massachusetts Institute of Technology', 10566, 40732],
+['Princeton', 7802, 37000],
+['Rice', 5879, 35551],
+['Stanford', 19535, 40569],
+['Yale', 11701, 40500]
+]
+
+
+print(universities)
+
+
+[1, 2, 3, 4, 5, 6] / 2 3 
+
+a = [232, 3452,4 , 4563] sum(a) / 4 mean 
+
+
+
+
+universities = [
+['California Institute of Technology', 2175, 37704],  # univer name / student / tutions fees 
+['Harvard', 19627, 39849],
+['Massachusetts Institute of Technology', 10566, 40732],
+['Princeton', 7802, 37000],
+['Rice', 5879, 35551],
+['Stanford', 19535, 40569],
+['Yale', 11701, 40500]
+]
+
+univ = []
+stu = []
+tf = []
+for i in universities:
+    print(i)
+    univ.append(i[0])  #'California Institute of Technology', 'Harvard'
+    stu.append(i[1]) # 2175, 19627
+    tf.append(i[2]) # 37704, 39849
+    
+
+print(univ)
+print(stu)
+print(tf)
+
+
+stu = [2175, 19627, 10566, 7802, 5879, 19535, 11701]
+tf = [37704, 39849, 40732, 37000, 35551, 40569, 40500]
+
+sum_stu = sum(stu) / len(stu)
+mid = len(stu)/2
+print(mid)
+print(sum_stu)
+
+
+# DATA TYPE METHODS:
+    
+int  
+string : [len, find, strip, lstring, rstrip, split, upper, lower] / immutable 
+tuple  : [index, remove, ] / immutable
+list   : [pop, insert, append, sum, remove, del, extend, ]
+
+a = "acer" 
+print(dir(a))
+
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+a = ("ACER", "HP")
+print(dir(a))
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'count', 'index']
+
+a = ["acer"]
+print(dir(a))
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+
+
+a = 10
+print(dir(a))
+
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+
+
+# DICTIONARY DATATYPE:
+    
+clock: dic 
+car: dic 
+
+car: meaning 
+key : value 
+order 
+  : wheel 
+ car: 
+ bike:
+ cycle: 
+     
+     
+Vechicle :  
+
+fish: 
+    
+    
+CAR: a passenger vehicle designed for operation on ordinary roads and typically having four wheels and a gasoline or diesel internal-combustion engine
+
+FISH : a passenger vehicle designed for operation on ordinary roads and typically having four wheels and a gasoline or diesel internal-combustion engine    
+
+
+PYTHON DUCTIONARY:
+    
+KEY: VALUE 
+
+car : fish 
+fish: a passenger vehicle designed for operation on ordinary roads and typically having four wheels and a gasoline or diesel internal-combustion engine
+
+    
+
+(1, 2, 3, 4,...)
+ 0  1  2  4,..n
+[1, 2, 3, 4....]
+ 0, 1, 2, 3...n
+ 
+{key:value, key:value,....} 
+
+
+state = ['odisha', 'AP', 'TL', 'MP']
+capital = ['BBS', 'AMRAVATI', 'HYD', 'BHOPAL']
+
+state_capital = zip(state, capital)
+print(list(state_capital))
+
+state_capital = {'OD': "BBS", 'AP': "AMB", 'TL': "HYD", 'MP': "BPL"}
+
+print(state_capital)
+
+state_capital = {'OD' : "BBS", 'AP' : "AMB", 'TL' : "HYD", 'MP' : "BPL"}
+print(state_capital)
+
+state_capital = {'DL' : "BBS", 'AP' : "AMB", 'TL' : "HYD", 'MP' : "BPL"}
+
+state_capital = {1 : "BBS", 'AP' : "AMB", "RED" : "HYD", 2 : "BPL"}
+print(state_capital)
+
+state_capital = {(1,2) : "BBS", 'AP' : "AMB", "RED" : "HYD", 2 : "BPL"}
+print(state_capital)
+
+
+strudent_marks = {'uma': (56, 78, 90, 45), 'sadhna': (78, 56, 40, 80), 'tanjima': (90, 56, 78, 69)}
+print(strudent_marks)
+strudent_marks = {'uma': [56, 78, 90, 45], 'sadhna': [78, 56, 40, 80], 'tanjima': [90, 56, 78, 69]}
+print(strudent_marks)
+
+
+emp_dic = {}
+print(emp_dic)
+print(type(emp_dic))
+
+emt_dict = dict()
+print(emt_dict)
+print(type(emt_dict))
+
+# DICTIONARY: DATA STRUCTURE 
+    
+it stores the values in KEY and VALUES pair 
+{key:value, key:value}
+
+key: key can be immutable data type 
+int, str, tuple 
+value: values can be immutable or mutable data type 
+int, str, tuple, list 
+
+(2, 3, 4, 56, ) > 1
+
+# Key as String Data type
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"}
+print(capital)
+print(type(capital))
+
+# Key as int data type 
+stud = {1: "Uma", 2: "Sadhan", 3: "Tanjima"}
+print(stud)
+print(type(stud))
+
+# Key as tuple Data type
+
+marks = {(45, 68, 90): "UMA", (70, 60, 80): "SADHAN", (90, 80, 70): "Tanjima"}
+print(marks)
+print(type(marks))
+
+
+# Accessing Dictionary Values 
+
+print(capital['India'])
+print(stud[1])
+print(marks[(45, 68, 90)])
+
+print(marks[45]) # KeyError: 45 
+
+
+print(stud[4]) # KeyError: 4 
+
+roll = [1, 2, 3]
+str = ['uma', 'sadhna', 'tanjima']
+
+print(roll[1] )
+
+
+customer_id = {'U1': 'S1', 'R1', 'R2', 'F1', 'L1'}
+print(customer_id) # SyntaxError: invalid syntax
+
+ac = ('S1', 'R1', 'R2', 'F1', 'L1',(1, 2, 3))
+
+customer_id = {'U1': ac}
+print(customer_id)
+
+customer_id = {'U1': ('S1', 'R1', 'R2', 'F1', 'L1')}
+
+flag = 'S1' in customer_id
+
+if flag:
+    print("customer exist")
+else:
+    print("customer does not exists")
+    
+    
+    
+
+print(customer_id.get('U1'))
+print(customer_id.get('S1')) #  
+
+
+# Adding and Removing values in a Dictionary 
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"}
+print(capital)
+capital['Japan'] = "Tokyo"
+print(capital)
+
+capital['India'] = 'BBS'
+print(capital)
+
+
+# del
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+print(capital)
+
+del capital['Bhutan']
+print(capital)
+
+del capital[] # SyntaxError: invalid syntax
+print(capital)
+
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+print(capital)
+del capital
+
+ 
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+
+capital.pop('India')
+print(capital)
+
+
+print(dir(dict))
+
+['__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+capital.popitem('India') # TypeError: popitem() takes no arguments (1 given)
+print(capital)
+
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+capital.popitem() 
+print(capital)
+
+
+
+import tkinter as tk
+
+root = tk.Tk()
+test = tk.Label(root, text="Red", bg="red", fg="white")
+test.pack(ipadx=30, ipady=6)
+test = tk.Label(root, text="Purple", bg="purple", fg="white")
+test.pack(ipadx=8, ipady=12)
+tk.mainloop()
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
     
 
 
@@ -3160,220 +3714,7 @@ print(c)
 
 
 
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
  
 
 
-
-
-
-
-    
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-    
-
-
-
-# Accessing Elements in List:

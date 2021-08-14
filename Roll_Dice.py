@@ -6,6 +6,7 @@ Created on Fri Jul 30 11:02:50 2021
 """
 
 import random as r
+
 def d1():
     print()
     print(" -------")
