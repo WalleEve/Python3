@@ -3689,6 +3689,576 @@ tk.mainloop()
 
 
 
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+
+{}
+dict()
+
+dictionary[key] = value 
+
+dictionary.pop()
+dictionary.popitem()
+del dictionary[key]
+
+# Python Dictionary Method:
+1.clear() 
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+print(len(capital))
+
+capital.clear()
+print(capital)
+
+2. copy():
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+
+temp_cap = capital.copy()
+print(temp_cap)
+
+3. fromkeys()
+
+a = (1, 2, 3, 4)
+b = ("acer")
+
+new_dict= {}.fromkeys(a)
+print(new_dict)
+
+new_dict= {}.fromkeys(a, b)
+print(new_dict)
+
+
+a = (1, 2, 3, 4)
+b = ["acer"]
+
+new_dict= {}.fromkeys(a)
+print(new_dict)
+
+new_dict= {}.fromkeys(a, b)
+print(new_dict)
+
+b.append("lenovo")
+print(new_dict)
+
+
+a = (1, 2, 3, 4)
+b = ["acer"]
+
+new_dict = {x:b for x in a}
+print(new_dict)
+
+b.append("dell")
+print(b)
+print(new_dict)
+
+a = (1, 2, 3, 4)
+b = ["acer"]
+
+new_dict = {x:list(b) for x in a}
+print(new_dict)
+
+b.append("dell")
+print(b)
+print(new_dict)
+
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+
+ndict = capital.setdefault("Japan")
+
+print(capital)
+print(ndict)
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+
+ndict = capital.setdefault("Japan","Tokyo")
+
+print(capital)
+print(ndict)
+
+marks = {'Physics':67, 'Maths':87}
+internal_marks = {'Practical':48}
+
+marks.update(internal_marks)
+print(marks)
+
+
+marks = {'Physics':67, 'Maths':87}
+marks.update({'Physics':80})
+print(marks)
+
+
+capital = {'India': "New Delhi", 'Nepal': "Kathmandu", 'Bhutan': "Thumpu"} 
+print(capital.items())
+print(capital.keys())
+
+
+def get_key(dic, val):
+    for key, value in dic.items():
+        if val == val:
+            return key 
+        
+        
+        
+my_dict = {"java":100, "python":112, "c":11}
+
+get_key(my_dict, '100')
+
+DICT: 
+    
+create dictionary: {key:value}
+create dictionary with dict function: dict() 
+insert: dictionary[key] = value / if key already exists then it will be replaced, if key does not exists then it will be added to the dictionary 
+how to fetch data from Dictionary 
+
+by using key: 
+dictionary_name[key] # KeyError 
+.get() 
+dictionary_name.get(key) # None 
+
+pop() 
+dictionary.pop(key)
+popitem() 
+dictionary.popitem() # no argument 
+del dictionary_name[key]
+del dictionary_name[] # error 
+del dictionary_name 
+
+
+# Clear 
+
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks)
+del marks 
+print(marks)
+
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks)
+marks.clear() 
+print(marks)
+
+
+
+# Copy()
+marks = {'math':90, 'eng':70, 'sci':80}
+marks1 = marks.copy()
+print(marks)
+print(marks1)
+
+marks1['hist'] = 65
+print(marks)
+print(marks1)
+
+
+# fromkeys 
+
+a = [1, 2, 3, 4]
+my_dict = {}.fromkeys(a) # Value: None
+print(my_dict)
+
+a = ["acer", "dell", "hp"]
+b = ["laptop", "desktop"]
+
+my_dict = {}.fromkeys(a, b)
+print(my_dict)
+
+b.append("minitop")
+print(my_dict)
+
+
+a = ["acer", "dell", "hp"]
+b = ["laptop", "desktop"]
+
+my_dict = {x:list(b) for x in a}
+print(my_dict)
+
+b.append("minitop")
+print(my_dict)
+
+# get()
+
+# items 
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks.items()) # view  
+
+marks = {'math':90, 'eng':70, 'sci':80}
+a = marks.items()
+print(type(a)) # view 
+
+# keys 
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks.keys())
+
+# pop()
+
+# popitem()
+
+# setdefault()
+
+dict_name.setdefault(key) # {} return value / key:None 
+dict_name.setdefault(key, value) # {} return value / key:None 
+
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks.setdefault('math')) # 90 
+
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks.setdefault('hist')) # None
+print(marks)
+
+marks = {'math':90, 'eng':70, 'sci':80}
+print(marks.setdefault('hist',50)) # None
+print(marks)
+
+
+# update 
+marks = {'math':90, 'eng':70, 'sci':80}
+
+marks.update({'math':95})
+print(marks)
+
+marks.update({'hist':95})
+print(marks)
+
+a = {'hist':90}
+marks.update(a)
+print(marks)
+
+a = ['hin',70]
+marks.update(a) # ValueError: dictionary update sequence element #0 has length 3; 2 is required
+print(marks)
+
+marks = {'math':90, 'eng':70, 'sci':80, 'hist':90}
+
+def get_key(mdic, pvalue):
+    for key, value in mdic.items():
+        if value == pvalue:
+            return key 
+        
+        
+
+marks = {'math':90, 'eng':70, 'sci':80, 'hist':90}
+get_key(marks, 90)
+
+
+
+
+key_list = []
+def get_key(mdic, pvalue):
+    for key, value in mdic.items():
+        if value == pvalue:
+            key_list.append(key)
+            
+    return key_list
+            
+        
+        
+key_list = []
+marks = {'math':90, 'eng':70, 'sci':80, 'hist':90, 'odi':90}
+get_key(marks, 90)
+
+
+# Date: 17 Aug 2021:
+    
+#Dictionary:
+
+    clear
+    fromkeys
+    item 
+    keys 
+    default 
+    update 
+    copy 
+    values 
+    
+    
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+
+print(marks.get()) # TypeError: get expected at least 1 argument, got 0
+
+print(marks.get('mil')) # None 
+print(marks.get('math'))
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+
+print(marks.values())
+print(marks.keys())
+
+mrk = 70 
+print(marks.get(mrk))
+
+print(mrk in marks.values()) # 
+print(mrk in marks) # 
+
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+
+print(type(str(marks)))
+
+
+# Buit In Function 
+
+all(): Shows true element if all keys are available in dictionary 
+any(): Shows true values if the key dictionary is true 
+len(): Shows length of items 
+cmp(): compare two items in dictionary 
+sorted(): shows a novel arrangement list of keys 
+
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+print(all(marks))
+
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+print(sorted(marks))
+
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+
+marks1 = {'math':80, 'eng':70}
+
+
+# QUESTION:
+    
+1. Write a program to check if a given key is already exists in a dictionary 
+
+d = {1:10, 2:20, 3:30, 4:40, 5:50, 6:60}
+
+#marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+
+
+
+x = input("Enter a Dictionary Key: ") # Str 
+
+if x.isnumeric():
+    x = int(x)
+
+if x in d.keys():
+    print(f"Key {x} is  available in the DIctionary")
+else:
+    print(f"Key {x} is not available in the DIctionary")
+
+
+
+
+marks = {'math': 90, 'eng': 70, 'hin': 80, 'sci': 75}
+x = input("Enter a Dictionary Key: ") # Str 
+
+if x.isnumeric():
+    x = int(x)
+
+if x in marks.keys():
+    print(f"Key {x} is  available in the DIctionary")
+else:
+    print(f"Key {x} is not available in the DIctionary")
+
+
+2. Write a script to read number n and print a dictionary in the form(x: x*x)
+
+x = int(input("Enter a number:"))
+ed = dict() 
+
+for i in range(1, x+1):
+    ed[i] = i * i 
+    
+print(ed)
+
+
+3. Write a python program to map two list into a dictionary. 
+
+keys = ['r', 'g', 'b', 'y', 'w']
+values = ['red', 'green', 'blue', 'yellow', 'white']
+
+#Output: (r:red, g:green, b:blue, y:yellow, h:white)
+
+color = dict(zip(keys, values))
+print(color) # <zip object at 0x00000216472FD2C0>
+
+4. Write a program to bombine two dictionary adding values for common keys.
+dict1 = {'v':50, 'x':100, 'y': 300, 'z':600}
+dict2 = {'x':200, 'y':50, 'z':100} 
+    
+from collections import Counter 
+d = Counter(dict1) + Counter(dict2)
+print(d)
+ 
+
+keys = ['r', 'g', 'b', 'y', 'w']
+values = ['red', 'green', 'blue', 'yellow', 'white']
+    
+from collections import Counter 
+d = Counter(keys) + Counter(values)
+print(d)    
+    
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100'} 
+from collections import Counter 
+d = Counter(dict1) + Counter(dict2)
+print(d)  
+
+
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100'} 
+
+1. dict1[key]
+2. check if dict1[key] in dict2[key]
+3. if Ture 
+    int(dict1[key]) + int(dict2[key])
+4. add in new dictionary 
+5 if false then new dictionary 
+
+
+
+
+#------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100'} 
+
+1. dict1[key]
+2. check if dict1[key] in dict2[key]
+3. if Ture 
+    int(dict1[key]) + int(dict2[key])
+4. add in new dictionary 
+5 if false then new dictionary
+
+
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100'} 
+dict1_key = dict1.keys()
+dict2_key = dict2.keys()
+print(dict1_key)
+print(dict2_key)
+
+new_dict = dict()
+
+for i in dict1_key:
+    print(i)
+    if i in dict2_key:
+        new_dict[i] = int( dict1[i] ) + int( dict2[i] )
+        #print(new_dict)
+    else:
+        new_dict[i] = dict1[i]
+        
+print(new_dict)
+
+
+
+
+
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100', 'a':'90'} 
+dict1_key = dict1.keys()
+dict2_key = dict2.keys()
+
+dict_set = set(list(dict1_key) + list(dict2_key))
+print(dict_set)
+
+new_dict = dict()
+
+for i in dict_set:
+    print(i)
+    if i in dict2_key and i in dict1_key:
+        new_dict[i] = int( dict1[i] ) + int( dict2[i] )
+        #print(new_dict)
+    else:
+        if dict1.get(i) != None:
+            new_dict[i] = dict1.get(i)
+        else:
+            new_dict[i] = dict2.get(i)
+            
+        
+        
+print(new_dict)
+
+
+############################################################################################################
+Date: 18 Aug 2021
+############################################################################################################
+
+#Q:  Write a program to find the highest three values in a dictionary 
+
+from heapq import nlargest 
+
+my_dict = {'a':500, 'b':225, 'c':560, 'd':400, 'e':840, 'f':120}
+three_largest = nlargest(3, my_dict, key=my_dict.get)
+print(three_largest)
+
+
+a = [(1, 5), (3, 4)]
+print(max(a))
+
+
+def get_second_number(lst):
+    return lst[1]
+
+a = [(9, 3), (5, 6), (1, 8)]
+a.sort(key=get_second_number)
+print(a)
+
+my_dict = {'a':500, 'b':225, 'c':560, 'd':400, 'e':840, 'f':120}
+a = list((my_dict.items()))
+print(a[0][1])
+
+def get_second_number(lst):
+    return lst[1]
+
+a.sort(key=get_second_number)
+print(a[-3:]) 
+
+
+a = {1, 2, 3, 4, 5}
+print(a)
+
+a.add(5)
+print(a)
+
+my_set = {(1, 2)}
+print(my_set)
+
+my_set.update(([3, 4, 5, 6]))
+print(my_set)
+
+for i in my_set:
+    print(i)
+
+
+
+dict1 = {'v':'50', 'x':'100', 'y': '300', 'z':'600'}
+dict2 = {'x':'200', 'y':'50', 'z':'100', 'a':'500'}
+
+dict2 = {'x':'200', 'y':'50', 'z':'100', 'a':'500', 'm':{'c':100, 'd':200}}
+print(dict2['m']['c'])
+
+# Q5: Write a program to find the highest three values in a dictionary:
+    
+
+
+#output: n_dict ={ 'z':600, 'a':450, 'y':300 } 
+
+dict1 = {'v':50, 'x':100, 'y': 300, 'z':600, 'a':450}
+a = list(dict1.items())
+def get_second_number(lst):
+    return lst[1]
+
+a.sort(key=get_second_number, reverse=True)
+x= a[:3]
+print(dict(x))
+
+
+from heapq import nlargest 
+dict1 = {'v':50, 'x':100, 'y': 300, 'z':600, 'a':450}
+three_larges = nlargest(3, dict1, key = dict1.get)
+print(three_larges)
+
+
+# Q6: Write a program to remove a key from  a dictionary 
+
+
+
+
+
+
 
 
 
