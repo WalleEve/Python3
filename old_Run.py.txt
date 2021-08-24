@@ -3923,6 +3923,13 @@ a = {'hist':90}
 marks.update(a)
 print(marks)
 
+# Add / Merge Two dictionary
+a = {1:'a', 2:'b'}
+b = {3:'c', 4:'d'}
+
+a.update(b)
+print(a)
+
 a = ['hin',70]
 marks.update(a) # ValueError: dictionary update sequence element #0 has length 3; 2 is required
 print(marks)
@@ -4000,7 +4007,6 @@ print(type(str(marks)))
 all(): Shows true element if all keys are available in dictionary 
 any(): Shows true values if the key dictionary is true 
 len(): Shows length of items 
-cmp(): compare two items in dictionary 
 sorted(): shows a novel arrangement list of keys 
 
 
@@ -4253,6 +4259,395 @@ print(three_larges)
 
 
 # Q6: Write a program to remove a key from  a dictionary 
+
+my_dict = {'a':500, 'b':225, 'c':560, 'd':400, 'e':840, 'f':120}
+
+rKey = input("Enter a key to remove from the Dictionary: ") 
+
+if rKey in my_dict:
+    my_dict.pop(rKey)
+else:
+    print("Key is not available!")
+    
+    
+print(my_dict)
+-------------------------------------------------------------------------------------------------------------
+#############################################################################################################
+Date: 19 Aug 2021
+-------------------------------------------------------------------------------------------------------------
+
+
+# SET:
+Set is a simply unordered collection of distinct hashable objects.  
+
+Define: we can define a set using curly brackets {} 
+
+immutable objects: Hashable value 
+
+set is a mutable object 
+
+there is no key value available for the set  
+
+
+There are 2 types of set available 
+
+SET [mutable]
+FROZENSET [immutable]
+
+
+# How to create set 
+
+a = {} # empty set 
+
+a = set() # empty set 
+
+a = {1, 2, 3, 4}
+print(a)
+print(type(a))
+
+
+
+a = {4, 3, 1, 5, 2, 1, 7, 2, 4, 1} 
+print(a)
+print(type(a))
+
+
+a = {'a', 'b', 1, 'c', 2, 5, 3, }
+print(a)
+print(type(a))
+
+a = {1, 3, 5, 2, 'a', 'c', 'b', (1, 'b', 2, 'a')} 
+print(a)
+
+
+a = {1, 2, 'a', (1, 'a', ['1', 'a'])}
+print(a) # TypeError: unhashable type: 'list' 
+
+
+myset = set((1, 2, 3))
+print(myset)
+
+myset = set([1, 2, 3, 4])
+print(myset)
+
+
+
+print(dir(myset))
+
+['__and__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+
+# number of elements:
+    
+a = {1, 2, 3, 4}
+print(len(a))
+
+a = {4, 3, 1, 5, 2, 1, 7, 2, 4, 1}
+print(len(a))
+
+
+# Add or remove elements from a set  
+a = {1, 2, 3, 4}
+a.add(5)
+print(a)
+
+a = {1, 4, 3, 5}
+a.add(2)
+print(a)
+
+a = {'a', 'b','d'}
+a.add('c')
+print(a)
+
+a.add((1, 3, 2))
+print(a)
+
+a = {1, 2, 3, 4}
+a.add([5, 6, 7, 8]) # TypeError: unhashable type: 'list'
+print(a)
+
+
+a = {1, 2, 3, 4}
+a.update([5, 6, 7, 8])
+print(a)
+
+
+set1 = set([1, 2, 3, 4])
+set2 = set([5, 6, 7, 1])
+
+set1.update(set2)
+print(set1)
+
+
+#  Remove 
+
+myset = set([1, 2, 3, 4, 5, 6])
+print(myset)
+
+myset.remove(3)
+print(myset)
+
+myset = set([1, 2, 3, 4, 5, 6])
+myset.discard((2, 3, 4))
+print(myset)
+
+
+# Set Data type / Datastucture 
+
+collection elements hetorogenius 
+duplicates are not allowed 
+insertion order is not preserved.
+indexing and slicing not allowed for the set 
+['a', 'b', 'c']
+  0    1    2  
+ [0:1]
+ [] 
+ 
+{'a', 'b', 'c'}  no index / no slicing   
+
+l = ['a', 'b', 'c']
+print(l[1:])
+
+set is a mutable type 
+
+int / str/ tuple  : immutable data type
+
+list / dict / set : mutable data type 
+
+how to create set:
+
+{} : int / str / tuple 
+set() : iterables items [int is not an iterable item]
+
+a = {10}
+print(a)
+print(type(a))
+
+a = set(10) # TypeError: 'int' object is not iterable
+print(a)
+print(type(a))
+
+
+a = set(('x', 1, (8, 9)) ) # str 
+print(a)
+print(type(a))
+
+a = set(('a',)) # tuple
+print(a)
+print(type(a))
+
+
+a = set([1, 2, 3, 4]) # list
+print(a)
+print(type(a))
+
+
+# How to add new values to a set 
+1. add(x) 
+
+a = {2, 4, 6, 8}
+print(a)
+a.add(10)
+print(a)
+
+a.add(1)
+print(a)
+
+a = {'a', 'd', 'x', 'f'}
+a.add('c')
+print(a)
+
+
+a.add('b', 'l')  # TypeError: add() takes exactly one argument (2 given)
+print(a)
+
+n = ('b', 'l')
+a.add(n)
+print(a)
+
+
+
+2. update() 
+
+a = {'a', 'd', 'x', 'f'}
+a.update('z', 'b')
+print(a)
+
+
+a = {1, 2, 3, 4}
+b = {'a', 'b', 'c', 'd'}
+
+a.update(b)
+print(a)
+
+print(a+b)
+
+a = 'acer'
+b = 'lenovo'
+
+print(a+b)
+
+a = {1:'a', 2:'c'}
+b = {3:'b'}
+
+a.update(b)
+print(a)
+
+a = (1, 2, 3)
+b = (4, 5)
+
+print(a+b)
+
+a = [1, 2, 3, 4]
+b = ['a', 'b', 'c', 'd']
+
+print(a+b)
+
+
+Note: we can concatinate two varibale using + operator if the data type of the 
+both variable is in [str, list, tuple] and same type
+Note: if want to concatinate dictionary and set then we have to use .update() 
+Note: Int data type does not support concatinate 
+a = 123 
+b = 'abd'
+print(a + b)  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+a = (1, 2, 3)
+b = [4, 5, 6]
+print(a+b) # TypeError: can only concatenate tuple (not "list") to tuple
+
+
+a = 200 
+b = 204 
+print(a+b)
+
+
+Q1. Which of the following are valid for set ? 
+
+s = set() # set 
+1. s.add(10) # True  /  True
+2. s.add(10, 20, 30) # False / False 
+3. s.update(10) # True  / True 
+4. s.update(10, 40, 50)   # True  / False 
+
+
+s = set()
+s.add(10)
+print(s) # True 
+
+s = set()
+s.add(10, 20, 30)
+print(s) # False 
+
+
+s = set()
+s.update((10,))
+print(s) # TypeError: 'int' object is not iterable
+
+s = set()
+s.update((10, 40, 50))
+print(s) # TypeError: 'int' object is not iterable
+
+
+# copy()
+Returns copy/duplicate of the set 
+it is cloned object. 
+
+s = {10, 20, 30}
+s1  = s.copy()
+print(s)
+print(s1)
+
+print(id(s))
+print(id(s1))
+
+s.add(40)
+print(s)
+print(s1)
+
+s = {10,( 20, 30)}
+s1  = s.copy()
+print(s)
+print(s1)
+
+s.add(40)
+print(s)
+print(s1) 
+
+# Shallow Copy 
+# Deep Copy 
+
+s = [10,[ 20, 30]] # list
+s1  = s.copy()
+print(s)
+print(s1)
+
+s[1][1] = 40 
+print('s', s)
+print('s1', s1) 
+
+
+#  pop():
+It removes and returns some random element from the set 
+
+s = {40, 10, 30, 20}
+print(s)
+print(s.pop())
+
+s = {10, 20, 30}
+print(s.pop())
+
+s = {'40', '10', '30', '20'}
+print(s)
+print(s.pop())
+
+s = {'40', '10', '30', '20'}
+print(s)
+print(s.pop('30')) # TypeError: pop() takes no arguments (1 given)
+
+s = {10, 20, 30}
+print(s.pop())
+
+# Remove 
+It removes specified element from the set 
+if the specified element is not present in the list then it will raise KeyError
+
+
+s = {'40', '10', '30', '20'}
+s.remove('30')
+print(s)
+
+s = {'40', '10', '30', '20'}
+s.remove()
+print(s) # TypeError: remove() takes exactly one argument (0 given)
+
+s = {'40', '10', '30', '20'}
+s.remove('60')
+print(s) # KeyError: '60'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 
 

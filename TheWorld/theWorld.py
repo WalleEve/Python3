@@ -3,6 +3,8 @@ from tkinter import ttk
 from tkinter import messagebox
 from PIL import ImageTk, Image
 import openpyxl as pyxl
+import webbrowser
+import sys
 
 
 root = Tk()
@@ -16,6 +18,9 @@ global searchCombo
 global country_details
 global country_list
 
+# exit function
+def exit():
+    sys.exit()
 # Fetch country name
 def fetchCuntryExl():
     #global country_list
@@ -44,14 +49,29 @@ def fetchCuntryExl():
         details = []
     return country_list, country_details
 
+def callback(city):
+    aLink = "https://en.wikipedia.org/wiki/"+city
+    webbrowser.open_new(aLink)
 
+def callback1():
+    country = tSearch
+    callback(country)
 
 # get the flag
 def getflag(cName):
-    image1 = Image.open("all_flags\\"+cName.lower()+'.gif') # "India_Flag.jpg"
-    image1 = image1.resize((150, 85))
-    test = ImageTk.PhotoImage(image1)
-    return test
+    try:
+        image1 = Image.open("all_flags\\"+cName.lower()+'.gif') # "India_Flag.jpg"
+        image1 = image1.resize((175, 85))
+        test = ImageTk.PhotoImage(image1)
+        return test
+    except FileNotFoundError:
+        image1 = Image.open("C:\\Users\\Sayed\Documents\\GitHub\\Python3\\TheWorld\\404_page_cover.jpg") # "India_Flag.jpg"
+        image1 = image1.resize((175, 85))
+        test = ImageTk.PhotoImage(image1)
+        return test
+
+
+
 
 def clearscr():
     searchCombo.set("")
@@ -62,14 +82,16 @@ def clearscr():
 # Functions:
 def search_detail():
     global temptSearch
+    global tSearch
     vDetails = []
+    tempGet = ''
 
 
     search_dashboard = Toplevel(root)
     search_dashboard.title("Dountry Dashboard")
     search_dashboard.geometry("600x400+200+200")
-
-    tSearch = vSearch.get()
+    tempGet =  vSearch.get()
+    tSearch = tempGet.title()
     if ' ' in tSearch:
         temptSearch = tSearch.replace(' ','_').replace('-','_')
 
@@ -78,7 +100,13 @@ def search_detail():
     # Clear Search Screen
     clearscr()
     # Country Details from Dictionary Object
-    vDetails = country_details[tSearch]
+    try:
+        print(country_details[tSearch])
+        vDetails = country_details[tSearch]
+    except KeyError:
+
+        vDetails = country_details[tempGet]
+
 
     # Country Frame
     cFrame = Frame(search_dashboard)
@@ -86,15 +114,18 @@ def search_detail():
 
     cLable = Label(cFrame, text=tSearch, font=("Calibri", 15, "bold"))
     cLable.place(x=40, y=30)
+    print(vDetails[3])
+    cnLabel = Label(cFrame, text=vDetails[3], font=("Calibri", 12, "bold"))
+    cnLabel.place(x=270, y=70)
 
     # Flag Frame
-    fFrame = Frame(search_dashboard)
-    fFrame.place(x=410, y=5, width=150, height=90)
+    fFrame = Frame(search_dashboard, bg="deepskyblue1",bd=2, relief="raised")
+    fFrame.place(x=410, y=1, width=182, height=95)
 
     img = getflag(temptSearch)
     label1 = Label(fFrame, image=img)
     label1.image = img
-    label1.place(x=2, y=5)
+    label1.place(x=0, y=0)
 
     # Detail Frame
     dFrame = Frame(search_dashboard, bg="white")
@@ -121,9 +152,9 @@ def search_detail():
 
 
     # button
-    exitButton = Button(dFrame, text="Exit", font=("Calibri", 12, "bold"), height = 1, width=12)
+    exitButton = Button(dFrame, text="Exit", font=("Calibri", 12, "bold"), height = 1, width=12, command=exit)
     exitButton.grid(row=6, column=0, columnspan=1, sticky=W)
-    wikiButton = Button(dFrame, text="Wiki", font=("Calibri", 12, "bold"), height = 1, width=12)
+    wikiButton = Button(dFrame, text="Wiki", font=("Calibri", 12, "bold"), height = 1, width=12, command=callback1)
     wikiButton.grid(row=6, column=1, columnspan=1, sticky=W)
 
 
@@ -132,7 +163,7 @@ def searchExp():
 
 def search():
     tSearch = vSearch.get()
-    if tSearch == "Pick an Option" or tSearch == '':
+    if tSearch == "Pick an Option" or tSearch == '' or tSearch.isspace():
         searchExp()
     else:
         search_detail()

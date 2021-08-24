@@ -5,6 +5,7 @@
 pip install --upgrade pip    # Python module installer
 pip install --upgrade Pillow # Pillow or PIL basically used to handle image file in Tkinter
 pip install openpyxl         # openpyxl is used to access data from excel file
+pip install tkinterweb
 
 
 Ex:
