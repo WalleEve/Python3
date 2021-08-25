@@ -4626,6 +4626,359 @@ print(s) # KeyError: '60'
 
 
 
+Set:
+    
+dic = {1:'a', 2:'b', 3:'c'}
+print(dic[2]) # 
+print(dic.get(2)) # 
+
+aset = {1, 2, 3, 4, 5, 6}
+print(aset)
+aset.remove(3) 
+print(aset)
+
+aset = {1, 2, 3, 4, 5, 6}
+print(aset)
+aset.remove(7) # KeyError: 7
+print(aset)
+
+# DISCARD
+
+aset = {1, 2, 3, 4, 5, 6}
+print(aset)
+aset.discard(3)
+print(aset)
+
+aset = {1, 2, 3, 4, 5, 6}
+print(aset) # {1, 2, 3, 4, 5, 6}
+aset.discard(7)
+print(aset) # {1, 2, 3, 4, 5, 6}
+
+# RANGE 
+
+# 
+
+# SET IN FOR LOOP: 
+    
+
+aset = {1, 2, 3, 4, 5, 6}
+for i in aset:
+    if i == 2:
+        print(i + 10)
+    else:
+        print(i)
+        
+        
+        
+        
+# Write a program to print different vowels present in a given ward? 
+
+wi = input("Enter word to search for vowels:")
+
+s = set(wi)
+v = {'a', 'e', 'i', 'o', 'u'}
+
+for i in s:
+    if i in v:
+        print(f"Presenting the vowel in the given word: {i}")
+    
+
+
+# Matha matical Operations on the set:
+    
+
+1.  UNION: 
+    
+We can use this function to return all elements present in both the sets 
+
+syntax: x.union(y)
+
+x.union(y) or x|y 
+
+x = {10, 20, 30, 40}
+y = {30, 50, 40, 60}
+
+print(x.union(y)) # {10, 20, 30, 40, 50, 60}
+print(x|y) #
+
+
+x = {10, 20, 30, 40}
+y = {30, 50, 40, 60}
+z = {60, 10, 40, 50}
+
+print(x.union(y).union(z)) 
+print(x|y|z)
+
+2. INTERSECTION():
+    
+x = set()
+y = set()    
+
+Returns common elements presented in both x and y  or sets 
+
+syntax: x.intersection(y) 
+
+x.intersection(y)   or x & y 
+
+x = {10, 20, 30, 40}
+y = {30, 50, 40, 60}
+
+print(x.intersection(y)) # 30, 40
+print(x & y)
+    
+3. difference():
+
+Returns the elements present in x but not in y 
+    
+x = set()
+y = set() 
+syntax: x.difference(y)
+
+x.difference(y)  or x - y 
+
+x = {10, 20, 30, 40}
+y = {30, 50, 40, 60}
+
+print(x.difference(y))
+print(x - y)
+
+
+4. symmetric difference():
+x = set()
+y = set() 
+    
+Returns elements present in either x or y but not in both 
+syntax: x.symmetric_difference(y)
+x.symmetric_difference(y) or x ^ y 
+
+x = {10, 20, 30, 40}
+y = {30, 50, 40, 60}
+
+print(x.symmetric_difference(y))
+print(x ^ y)
+
+
+# Membership operation (in , not in)
+
+s = set('sadhana')
+print(s) # {s,a,d,h,n} / 
+
+print('a' in s) # True
+print('z' in s) # False
+
+print('a' not in s) # False
+print('z' not in s) # True
+
+
+# Set Comprehension 
+
+l = [1, 2, 3, 4, 5] # list 
+
+s = {x * x for x in l}
+print(s)
+
+
+l = [1, 2, 3, 4, 5]
+s = set()
+for i in l:
+    
+    print(i * i)
+    result = i * i
+    s.add(result)
+    
+print(s)
+
+
+Q: Write a program to eliminate duplicates present in the list?
+
+l = input("Enter a string") # input always accept string 
+
+s = set(l)
+print(s)
+
+l = input("Enter a string: ") # uma sanker 
+l1 = []
+
+for i in l:
+    if i not in l1:
+        l1.append(i)
+        
+print(l1)     
+
+
+rng = range(5)
+print(rng)
+print(type(rng))
+
+l = list(range(5))
+print(l)
+
+l2 = list(range(6, 11))
+print(l2)
+
+a = dict(zip(l, l2)) 
+print(a)
+
+# SET: 
+    
+set()
+add 
+update 
+remove 
+discard 
+clear 
+in / not in 
+union 
+intesect 
+difference 
+sematric difference 
+
+
+a = {1, 2, 3, 4, 5, 6}
+b = {5, 6, 1}
+
+print(a - b)  #
+
+
+# FORZEN SET: 
+    
+# set is a mutable : we can change the value 
+
+vowel  = {'a', 'e', 'i', 'o', 'u'}  # set 
+print(vowel)
+print(type(vowel))
+fset = frozenset(vowel)
+print(fset)
+print(type(fset))
+
+
+vowel.add('x')
+print(vowel)
+
+fset.add('x')
+print(fset)
+
+person = {'name': "Sadhan", 'age': "28", 'phone': 42381012351, 'gen': "F"}
+print(person)
+print(type(person))
+
+pKeys = list(person.keys())
+print(list(pKeys))
+#print(set(pKeys))
+
+pKeys.append("address")
+print(pKeys)
+
+
+person = {'name': "Sadhan", 'age': "28", 'phone': 42381012351, 'gen': "F"}
+fset = frozenset(person)
+print(fset)
+print(type(fset))
+
+fset.add("address")
+print(fset)
+
+fset.update("address")
+print(fset)
+
+fset.remove("name")
+print(fset)
+
+
+
+cnt = {'Alzeria': [44616624,	'Algiers',	'Dinar',	'Africa',	'Arabic;Tamazight;French'],
+       '': [],
+       '': [],
+       .
+       .
+       .}
+
+
+# RANGE 
+Builtin Function 
+
+
+Syntax: range(start_value, end_value/stop, step)
+1. start_value:optional, it takes  Default value as  [0], we can put any value , start value should be lesser than the end value 
+2. end_value / stop : compulsory 
+3. step: optional , if step is not available then step will be incremented by 1 if step is avilable then it will increment by the step value 
+
+range(5) # 0 to n-1 [n is end value or stop value] 0, 1, 2, 3, 4 
+
+a = range(5)
+print(a)
+print(type(a))
+
+
+a = range(5)
+print(set(a))
+print(type(a))
+
+
+# Range function with single Parameter [stop value] 
+
+a = range(-5) # -5 stop range , 0 , 1
+print(set(a))  #  -4/ -4,-3,-2,-1, 0 / 0 / None 
+
+a = range(5.2) #  TypeError: 'float' object cannot be interpreted as an integer
+print(set(a))
+
+# Range function with 2 parameters
+
+a = range(1, 10) #  1 > starting point and 10 > ending point 
+print(set(a))
+
+a = range(-1, -10)
+print(set(a)) # 
+
+a = range(-10, 0) 
+print(list(a)) 
+
+a = range(-10, -5)
+print(list(a))
+
+
+#  Three Parameter:
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
