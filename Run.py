@@ -1,230 +1,161 @@
-#  Three Parameter:
-range: 
-. range with single parameter 
-. range with two parameter 
+# OPERATOR 
+. Arithmetic Operator 
+. Comparison operator 
+. Assignment Operator
+. Logical Operator 
+. Bitwise Operator (not completed)
+. Membership Operator : in , not in 
+. Identity Operator : is 
 
-+number 
--number 
+# Data Type 
+. Reserve words :
+.  
 
-. range with three parameter     
+. String 
+. Number
 
-range(start, stop, step) 
-
-start value should be less than stop value 
-if we do not provide start value then it will take 0 as start value :
-
-step: optional / default 1 step forward 
-if step is negative value then start value should be greater than stop value  
-
-a = range(5)
-print(list(a)) # 
-
-a = range(1, 5)
-print(list(a)) # 
-
-
-a = range(1, 10, 2) # 1: start 10: stop 2: step 
-print(list(a)) # 1..3..5..7..9 
-
-
-a = range(1, 10, 3) # 1: start 10 (n-1): stop 3: step 
-print(list(a)) # 1...4...7... 
-    
-
-a = range(1, 10, -1) # 1: start 10 (n-1): stop -1: step 
-print(list(a)) # 
-
-a = range(-5, -1, -1)
-print(list(a)) #
-
-a = range(3, -5, -1)
-print(list(a)) # 
-
-
-a = range(1, 5.5, 2)
-print(list(a)) # TypeError: 'float' object cannot be interpreted as an integer
-
-a = range(1, 10, 0)
-print(list(a)) # ValueError: range() arg 3 must not be zero
-
-a = range(0, 10, 2)
-print(tuple(a))
-print(type(a))
-
-
-a = 1 
-a = 0 1 2 3 4 5 6 7 8 9 
-
-tuple()
-set()
-list() 
-
-
-# Accessing 
-
-a = range(2, 8)
-a = list(a)
-print(a[3])
-
-
-# Iteration 
-
-for i in range(0, 10):
-    print(i)
-    print(type(i))
-    
-
-
-#  Compare 
-
-print(range(5) == range(5))    
-print(range(0, 5, 2) != range(0, 5, 3))
-
-print(range(1, 7) == range(1, 7, 2))
-
-
-# Membership :
-in / not in 
-
-a = range(2, 10, 2)
-a = list(a)
-print(6 in a) # 
-
-
-a = range(2, 10, 2) # 2 10-1 = 9 
-a = list(a)
-print(10 in a) #     
-
-
-
-# CONCATINATION 
-
-a ='uma' # str
-b = 'sanker'  # str 
-
-c = a + b
-print(c)
-
-a = 10  # int
-b = 20  # int
-c = a + b # 30 
-
-a = (1, 2, 3) # tuple
-b = (5, 6, 7) # tuple
-print(a + b) # 
  
-a = [1, 2, 3, 4] # list
-b = [5, 6, 7, 8] # list 
-print(a + b) # 
+. Tuples 
+. List 
+. Dictionary 
+. Set 
 
+. Range 
 
-a = {1, 2, 3, 4}
-b = {5, 6, 7} 
-#print(a + b)  # TypeError: unsupported operand type(s) for +: 'set' and 'set'
+2 Types of Data type:
+    
+MUTABLE: LIST, DICTIONARY, SET [We can change the value (Add a value)]
+IMMUTABLE:  STR, NUM, TUPLE   [We can not change the value (Add a value) ] 
 
-a.update(b)
-print(a)
+# CONTROL FLOW 
 
-a = {1:'a', 2:'c'}
-b = {1:'b'}
-# print(a + b) # 
-
-a.update(b) # if the key is already exists then replave the value of existing key. if key is not available then it will the respected key with value
-
-print(a)
-
-
-a = {1:'a', 2:'c'} # Dictionary : key:value  key shoudl not be duplicate 
-b = {3:'b'}
-# print(a + b) # 
-
-a.update(b)
-print(a)
+Control flow describe the order in which statements will be executed at runtime 
 
 
 
-a = {1:'a', 2:'c'} # Dictionary : key:value  key shoudl not be duplicate 
-b = {3:'c'}
-# print(a + b) # 
+a = [1, 2, 3, 4, 5] 
 
-a.update(b)
-print(a)
+a.append(7)
 
-
-# Range Concatinarion  
-
-a = range(1, 5)
-b = range(6, 10) 
+a = []
+a.pop() : IndexError: pop from empty list
 
 
-ismail = 
+Control Flow Statement: 
+    
+    1. Conditional Statement: 
+        1. if
+        2. if - elif  
+        3. if - elif - else 
+        
+    2. Transfer Statement:
+        1. break 
+        2. continue 
+        3. pass 
+    3. Iterative Statement:
+        1. for 
+        2. while 
+        
+
+1. Conditional Statement: 
+    
+# IF 
+
+syntax: if condition: statement 
+syntax: if condition:
+            statement 1
+            statement 2 
+            .
+            .
+            
+
+# If the condition is True then the statements will be executed 
 
 
-name:  = 'Iamail Baig'
-age: 26
-phone: 23523464
-add: Vyj
-gender: M 
-
-uma: 
-name:  = 'uma sanker'
-age: 26
-phone: 23523464
-add: Vyj
-gender: M 
-
-ismail = ['Iamail Baig', 26, 235234, Vyj, M]
-uma = ['uma', 26, 235234, Vyj, M]
-
-ismail = {name: ismail baig, age: 26, phone: 236226, add: Vyj, gen: M}
-
-
-
-# Range Concatinarion  
-
-a = range(1, 5)
-print(list(a))
-a = list(a)
-b = range(6, 10) 
-print(list(b))
-b = list(b)
-print(a + b)
-
-
-from itertools import chain 
-
-rng = chain(range(-5, -1, 2), range(5, 10, 2))
-print(list(rng))
+# Indentation : compulsory 
 
 
 
-Q1: Write a program to give a set of even numbers from 2 to 50 
+print('a')
+ print('a') # IndentationError: unexpected indent 
+ 
+a =
 
-a = range(2, 50, 2)
-print(list(a))
-
-
-
-
-
+1   2
+1   4
 
 
+name = input("Enter your name: ")
 
-
-
-
-
-
+if name == "uma":
+    print("Hello UMA Good Morning")
+    
+print("How are you!")
 
 
 
+name = input("Enter your name ")
+
+if name:
+    print(f"Hello {name}")
+     
+print(f"Hi {name}") 
+
+name = 'a' # True 
+name = None # False 
+
+
+
+name = input("Enter your name ")
+
+if name:
+    print(f"Hello {name}")
+    print("How are you")
+    print("Where are you from")
+    
+print(f"Hi {name}") 
+
+
+name = input("Enter your name ")
+
+if name:
+    print(f"Hello {name}")
+    print("How are you")
+    print("Where are you from")
+if name == '':
+    print("Please enter your name")
+    name = input("Enter your name ")
+    
+    
+print(f"Hi {name}") 
+
+
+name = input("Enter your name ")
+
+if name: # True
+    print(f"Hello {name}")
+    print("How are you")
+    print("Where are you from")
+    
+    if len(name) > 5: # True
+        print("Your name contain more than 5 chanracter")
+    print("Please choose a small name less than 6 character")
+
+        
+    
+    
+print(f"Hi {name}") 
 
 
 
 
 
+    
 
+            
 
+    
+       
 
 
 
