@@ -1,3 +1,229 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Sep  4 16:05:17 2021
+
+@author: Sayed
+"""
+
+Q1: 
+x = 10
+if x>10: # False 
+    x = x * 5
+    y = x - 5
+print(x, y)
+
+# None / Error / 10  # NameError: name 'y' is not defined
+
+
+Q2:
+
+x = 10
+
+if x >= 10: # True 
+    x = x * 5 # 50 
+    y = x -10 # 40
+    
+print(x, y)
+
+#  Error / 50,40 / 50, 40 
+
+
+
+
+   
+
+Q3:
+    
+value = 1000 
+if value<10000: # True 
+    value -= 50
+print(value)
+
+# 950 / 950 / 950 
+
+
+
+
+
+Q4:
+    
+del x
+del y
+    
+x = 10
+if x > 10:
+    x *= 5
+    y = x - 5
+    if x>20:
+        x *=2
+        y=x+10
+print(x, y)
+
+# 52, 62 / Error / Error  # NameError: name 'y' is not defined 100, 110 / 10 , 
+
+
+
+
+
+
+Q5:
+x = 10
+if x >= 10:
+    x *= 5
+    y = x-10
+    if x > 20:
+        x *= 2
+        y = x+10
+
+print(x, y)
+
+
+# 100 , 110 / 100, 110 / 100, 110
+
+
+
+
+Q6:
+v = 300 
+if v%3 == 0:
+    print(v, 'is divisible by 3')
+else:
+    print(v, 'is not divisible by 3')
+    
+#  1 print / 1 print / 1 print
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+Q8:
+x = int(input("Enter an integer number")) 
+if x > 0:
+    print(x, 'is a positive number')
+elif x < 0:
+    print(x, 'is a negative number')
+else:
+    print('x is zero')
+    
+
+# 
+
+Q9:
+x = int(input("Enter a number between 1-7")) # 5 10  -1  , 0 
+if x == 7:
+    print("sunday")
+elif x == 6:
+    print("monday")    
+elif x == 5:
+    print("tuesday")
+elif x == 4:
+    print("wednesday")
+elif x == 3:
+    print("thursday")
+elif x == 2:
+    print("friday")
+elif x == 1:
+    print("saturday")
+else:
+    print("invalid entry")
+
+
+
+Q10:
+v1 = -10
+
+if v1:
+    print("1 -Got a true value", v1)
+else:
+    print("1 -Got a false value")
+
+# p1 / p1 / p1
+    
+v2 = 0 
+if v2:
+    print("2 -Got a true value", v2)
+else:
+    print("2 -Got a false value", v2)
+
+# p1 / p2 / p1 # 2 -Got a false value 0
+
+a = True 
+b = False 
+
+print(a + a + a)
+
+
+
+    
+v3 = 100.50 
+if v3:
+    print("3 -Got a true value", v3)
+else:
+    print("3 -Got a false value", v3)
+    
+# P1 / 
+
+
+Q11:
+
+print("Input length of the triangle side.")
+x = int(input("x: "))
+y = int(input("y: "))
+z = int(input("z: "))
+
+if x == y == z:
+    print("Equilateral triangle")
+elif x !=y != z:
+    print("Scalene triangle")
+else:
+    print("isoscales triangle")
+    
+
+
+
+    
+Q12:
+
+i = 3
+j = 5
+k = 7
+
+if i < j: #True
+    if j < k: #True
+        i = j # i = 5 
+    else:
+        j = k
+else:
+    if j > k:
+        j = i 
+    else:
+        i = k
+        
+print(i, j, k)
+
+# 5, 5, 7 / 5, 5, 7 / 5, 5, 7 
+
+    
+Q13:
+    
+a = float(input("Input the length of side1: ")) # 10.5
+b = float(input("Input the length of side2: ")) # 20.5
+c = float(input("Input the length of side3: ")) # 10.5
+if (a < (b + c)) and (b < (a + c)) and (c < (a + b)):
+    print("The triangle is valid")
+else:
+    print("the triangle is not valid")
+    
     
 ----------------------------------------------------------------------------------------------------------
 Q1. Write a program to calculate the electricity bill 

@@ -5298,10 +5298,207 @@ if name: # True
     
 print(f"Hi {name}") 
 
+import smtplib
+
+gmail_user = 'x2xcyrus@gmail.com'
+gmail_password = 'Sayed08sabeeha'
+
+try:
+    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    server.ehlo()
+    server.login(gmail_user, gmail_password)
+except:
+    print ('Something went wrong...')
+
+
+a = 'sayed@live.in'
+print(a.split(','))
 
 # IF ELSE:
     
 
+# Ex1
+a = input("Enter a single digit number") # 9
+
+if a > 10:
+    print("Please give me a single digit number")
+    
+    if a < 10 :
+        print(f"Thank you for choosing {a}")
+        
+        
+    
+#  Ex2
+
+a = input("Enter a single digit number: ") # 9
+
+if a.isnumeric():
+    
+    if int(a) > 10:
+        print("Please give me a single digit number")
+    
+    if int(a) < 10 :
+        print(f"Thank you for choosing {a}")
+        
+    print("We got the number")
+        
+print("Thak you")
+    
+    
+    
+# if..else 
+
+start option :
+second option:
+    
+if: free time 
+  then go for the book
+  
+1 python book 
+
+if python Schand:
+    get the book
+else:
+    other auther book
+
+
+syntax:
+
+if <condition>:
+    statement 
+else:
+    statement 
+
+
+
+auth_name = input("Enter auther name: ") 
+
+if auth_name == 's.chand':
+    print("Please buy the book")
+else:
+    print("buy the book for mininum price")
+    
+# fstring
+# interpolation
+# 
+# 2 number find the greatest number:
+    
+fno = int(input("Enter first number: ")) # 32, 43 
+sno = int(input("Enter second number: "))
+
+if fno > sno: print(f"the greatest value is {fno} " )
+else: print(f"the greatest value is: {sno}")
+
+
+
+
+#  30, 40, 20, 50, 60, 65
+# smallest: 20
+# greatest: 65
+
+v1 = input("Enter numbers: ")
+vl = v1.split(',')
+print(max(vl))
+print(min(vl))
+
+a = input("Enter two number: ")
+l = a.split(',')
+if l[0] > l[1]:
+    print(f"The greates value is: {l[0]}")
+    print(f"The smallest value is: {l[1]}")
+    
+else:
+    print(f"The greates value is: {l[1]}")
+    print(f"The smallest value is: {l[0]}")
+    
+    
+# if-elif:
+    
+uma: s.chand / rima
+
+if book_auther== s.chand then 
+        get the book 
+
+elif book_autehr == rima then :
+        get the book 
+
+elif book_auther == 'pearson':
+    get the book    
+    
+if condiotn1:
+    action 1
+elif condition2:
+    action 2
+elif condition3:
+    action 3
+    
+
+brand = input("Enter your fav car brand: ")
+
+if brand == 'bmw' or brand == 'audi':
+    print("Awsome chose")
+elif brand == 'audi':
+    print('wanderfull')
+elif brand == 'toyota':
+    print("this a thril box ")
+elif brand == 'maruti':
+    print('purchasing a tin can')
+elif brand == 'tata':
+    print("buying a iron box")
+    
+if brand == 'audi':
+    print('wanderfull')    
+
+
+
+
+brand = input("Enter your fav car brand: ")
+
+if brand == 'bmw' or brand == 'audi':
+    print("Awsome chose")
+elif brand == 'audi':
+    print('wanderfull')
+elif brand == 'toyota':
+    print("this a thril box ")
+elif brand == 'maruti':
+    print('purchasing a tin can')
+elif brand == 'tata':
+    print("buying a iron box")
+else:
+    print("Please choose wisely")  
+    
+if brand == 'audi':
+    print('wanderfull')  
+else:
+    print("what a chose sir")
+
+
+
+if
+if-if
+if-else
+if-elif 
+if-elif-else
+
+Q: write a prograam to check wheather the given number is in between 1 and 100 
+
+a = int(input("Enter a number! "))
+
+if a <=100 and a > 0:
+    print("The number is in between 1 and 100")
+else:
+    print("The number is out of range")
+    
+    
+
+
+
+
+
+
+
+
+    
 
 
 
