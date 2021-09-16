@@ -394,22 +394,76 @@ else:
     
 Q5. Write a program to find the largest number out of two numbers excepted from user.
 
-Show Answer
+
 Q6. Write a program to check whether a number (accepted from user) is positive or negative.
 
 Show Answer
 Q7. Write a program to check whether a number is even or odd.
 
 Show Answer
+
 Q8. Write a program to display the spell of a digit accepted from user 
 (like user input 0 and display ZERO and so on)
 
+d1 = {0:'zero', 1:'one', 2: 'two', 3:'three', 4:'four', 5:'five', 6:'six', 7:'seven', 8:'eight', 9: 'nine',
+     10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'foutheen', 15: 'fifteen', 16: 'sixteen',
+     17: 'seventeen', 18: 'eighteen', 19: 'nineteen', 20: 'twenty',
+     30: 'thirty', 40: 'fourty', 50: 'fifty', 60:'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninty'}
+k = 1000  
+l = 1000000 
+c = 10000000 
+
+
+
+a = int(input("Enter a number:")) # 45 // 10 = 4 * 10 =  40  5
+
+if a <= 20:
+    print(d1[a]) # 
+elif a > 20 and a < 100:
+    if a % 10 == 0:
+        print(d1[a])
+    else:
+        res =  d1[(a // 10) * 10] + '-' + d1[a % 10]
+        print(res)
+elif a >=100 and a < 1000:
+    res = d1[a // (10 * 10)] + ' hundread ' + d1[ ((a % 100 ) // 10) * 10 ] + ' '+ d1[ (a % 100) % 10 ]
+    print(res)
+    
+
+
+
 Q8. Write a program to whether a number (accepted from user) is divisible by 2 and 3 both.
 
-Show Answer
+n = int(input("Enter a number: "))
+
+
+if n % 2 == 0 and n % 3 == 0:
+    print(f"{n} can be divisible by 2 as well 3")
+elif n % 2 == 0:
+    print(f"{n} is only divisible by 2 not with 3")
+elif n % 3 == 0:
+    print(f"{n} is only divisible by 3 not with 2")
+else:
+    print("sorry the input {n} is not divisible by 2 and 3 as well.")
+    
+
+
+n = int(input("Enter a number: ")) 
+
+
+if n % 2 == 0:
+    print(f"{n} is only divisible by 2 not with 3")
+elif n % 3 == 0:
+    print(f"{n} is only divisible by 3 not with 2")
+elif n % 2 == 0 and n % 3 == 0:
+    print(f"{n} can be divisible by 2 as well 3")
+else:
+    print("sorry the input {n} is not divisible by 2 and 3 as well.")
+
+
 Q9. Write a program to find the largest number out of three numbers excepted from user.
 
-Show Answer
+
 
 
 Q1. Accept the following from the user and calculate the percentage of class attended:
@@ -418,7 +472,20 @@ a.     Total number of working days
 
 b.     Total number of days for absent
 
-    After calculating percentage show that, If the percentage is less than 75, than student will not be able to sit in exam.
+    After calculating percentage show that, If the percentage is less than 75, than student will not be
+    able to sit in exam.
+    
+3 = 92 
+12
+
+80 
+55 
+25 
+
+print((55/80)*100)
+
+
+
 
 Q2. Accept the percentage from the user and display the  grade according to the following criteria:
 
@@ -432,9 +499,16 @@ Q2. Accept the percentage from the user and display the  grade according to the 
 
 Q1. Accept three numbers from the user and display the second largest number.
 
+
+
 Q2. Accept three sides of triangle and check whether the triangle is possible or not.
 
 (triangle is possible only when sum of any two sides is greater than 3rd side)
+
+a = 10 
+b = 6
+c = 15
+
 
 Q4. Accept the electric units from user and calculate the bill according to the following rates.
 First 100 Units     :  Free
@@ -470,31 +544,33 @@ Q1. Evaluate the following statements:
 a=True
 b=True
 c=True
-d=True       
-1.         print(c)
-2.         print(d)
-3.         print(not a)
-4.         print(not b )
-5.         print(not c )
-6.         print(not d)
-7.         print(a and b )
-8.         print(a or b )
-9.         print(a and c)
-10.       print(a or c )
-11.        print(a and d )
-12.       print(a or d)
-13.       print(b and c )
-14.       print(b or c )
-15.       print(a and b or c)
-16.       print(a or b and c )
-17.       print(a and b and c)
-18.       print(a or b or c )
-19.       print(not a and b and c)
-20.       print(not a or b or c )
-21.       print(not (a and b and c))
-22.       print(not (a or b or c) )
-23.       print(not a and not b and not c)
-24.       print(not a or not b or not c )
-25.       print(not (not a or not b or not c))
+d=True 
+print(c) 
+     
+1.         print(c) # True 
+2.         print(d) # True
+3.         print(not a) # False 
+4.         print(not b ) # False
+5.         print(not c ) # False
+6.         print(not d) # False
+7.         print(a and b ) # True
+8.         print(a or b ) # True
+9.         print(a and c) # True
+10.       print(a or c ) # True
+11.        print(a and d ) # True
+12.       print(a or d) # True
+13.       print(b and c ) # True
+14.       print(b or c ) # True
+15.       print(a and b or c) # True
+16.       print(a or b and c ) # True
+17.       print(a and b and c) # True
+18.       print(a or b or c ) # True
+19.       print(not a and b and c) # False 
+20.       print(not a or b or c ) # True
+21.       print(not (a and b and c)) #  False
+22.       print(not (a or b or c) ) # False 
+23.       print(not a and not b and not c) # False
+24.       print(not a or not b or not c ) # False 
+25.       print(not (not a or not b or not c)) # True 
 
 
