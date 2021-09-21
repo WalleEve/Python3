@@ -5736,9 +5736,457 @@ b = behera
 o = sbaedhhearnaa 
 
     
+s1 = input("Enter first string: ")
+s2 = input ("Enter second string: ")
+
+output = ''
+
+i,j = 0, 0
+
+while i < len(s1) or j < len(s2): #7 6 True or True : True / True or False : True 
+    if i < len(s1):
+        output = output + s1[i]
+        i = i + 1
+    if j < len(s2):
+        output = output + s2[j]
+        j = j + 1
+        
+print(output) 
+   
+------------------------------------------------------------------------------------------------------------
+                                                     17 Sep 2021
+----------------------------------------***********************************---------------------------------
+Loop: 2 
+1. Definite 
+2. Indefinite
+
+base 
+
+while 
+for 
+
+while : Indefinite 
+for : Definite 
+ 
+# FOR LOOP 
+If we want to execute action/statement  for every element present in some sequence 
+then we should go for for loop. 
+
+sequence : range of value / number 
+
+1, 2, 3, 4 
+a, b, c, d, 
+
+string: 'umasanker'
+
+hight: 
+    4.8
+    4.9 
+    5.6 
+    
+iterable data type : string / list / tuple / set / dic 
+
+
+# FOR LOOP SYNTAX: 
+
+    
+for <variable> in sequence [itarable data type] :
+    statement 
+    
+    
+Sequence : can be any string or any collection data. Body will be execute for 
+every element present in the sequence.    
+   
+
+s = 'uma shanker'
+
+for i in s:
+    print(i)
+    
+
+s = input("Enter your name: ") # 
+i = 0 
+for x in s:
+    print("The character present at ", i , "index:", x)
+    i = i + 1 
+    
+    
+# TO print uma 10 times 
+
+for x in range(10):
+    print("Hello")
+
+    
+for x in range(11):
+    print(x)    
+ 
+find odd number in between 0 to 20
+
+for x in range(21):
+    if x % 2 !=0:
+        print("Odd number: ", x)
+        
+# Display number from 10 to 1 in descending order.
+
+for x in range(10, 0, -1):
+    print(x)
+
+
+
+# Print sum of numbers present inside a list 
+ [10, 30, 50, 10] # 100
+
+a = input("Enter numbers")
+l = a.split(',')
+
+sum_ = 0
+for i in l:
+    sum_ = sum_ + int(i) 
+    
+print(sum_)
+ 
+
+a = '10,20,30'
+a = list(a)
+print(a) # 1, 0, , , 2, 0 
+
+------------------------------------------------------------------------------------------------------------
+
+                                            20 Sep 2021
+------------------------------************************************------------------------------------------
+
+# 
+user_input = [3, 5, 8, 0] # string 
+check if the list contain any zero .
+
+
+user_input = input("Enter a list of number: ")
+flag = False # initialy consider that there is no zero in user input 
+a = user_input.split(',')
+
+for i in a: # 0
+    if int(i )== 0:
+        flag = True 
+        
+if flag:
+    print("Sorry there is zero in in the list")
+else:
+    print("We are processing this.")
+    
+
+user_input = input("Enter a list of number: ")
+
+a = user_input.split(',')
+
+if '0' in a:
+    print("sorry")
+else:
+    print("Yes")
+
+
+a = 1 
+b = '1'
+
+print(type(a))
+print(type(b))
+
+if a == b:
+    print("Yes")
+else:
+    print("No")
+
+
+
+# While Loop: 
+    
+if we want to execute a group of statements iteratively until some condition is false, the we slould go for while loop  :
+    
+
+syntax: 
+
+    while <condition>:
+        statement1
+        statement2 
+     
+    
+
+# To print number from 1 to 10 
+
+x = 1 
+
+while x <= 10:
+    print(x)
+    x = x + 1 
+    
+
+# Display the sum of first n numbers:
+
+n = 10  
+
+1+2+3+4+...+10
+
+sum1 = 0 
+i = 1 
+while i<=10:
+    sum1 = sum1 + i 
+    i = i+1 
+
+print(sum1)    
+
+user_input = int(input("Enter a number"))
+
+total = 0 
+i = 1
+while i <=  user_input:
+    total = total + i
+    i = i + 1 
+    
+print(total)
+
+
+# Write a program to prompt user input to enter some name until entries Tanjima 
+
+name = input("Enter your name: ")
+
+if name == 'Tanjima':
+    print("Welcome")
+else:
+    print("Sorry wrong name")
+    
+
+name = input("Enter your name: ")
+
+flag = True 
+
+while flag:
+    if name == 'Tanjima':
+        print("Welcome")
+        flag = False 
+    else:
+        print("invalid name")
+        name = input("Enter your name: ")
+        
+
+
+name = '' # Uma 
+
+while name !='Tanjima': # 'sadhana' True 
+    name = input("Enter your name: ") # Tanjima
+
+print("Welcome")
+    
+
+------------------------------------------------------------------------------------------------------------
+
+                                            21 Sep 2021
+------------------------------************************************------------------------------------------
+s = input("Ener a string:")
+
+for i in range(len(s)):
+    print(f"positive index {i}, negative index { (len(s) - i) * -1} | Value: {s[i]}")
+    
+a = 'sayed'
+print(a[0])
+print(a[-5])
+
+# 
+
+usr_input = "uma"
+
+output: 
+    positive index [0] negative index [-3] | value: [u]
+    positive index [1] negative index [-2] | value: [m]
+    positive index [2] negative index [-1] | value: [a]
+    
+    
+
+user_input = input("Enter a string: ")
+
+for i in range(len(user_input)):
+    print(f"positive index {i} negative index {( len(user_input) - i ) *-1 } | value: {user_input[i]}")
+
+# INFINITY LOOPS: 
+
+    
+a = '' # None
+while a != 'uma': # '' != uma # True 
+    input("enter your name") # sadhana 
+
+
+print(name)
+
+a = 'uma'
+
+while a:
+    print(a)
+    
+
+# Nested Loop: 
+    
+If we take a loop inside another loop, then this will be called as nested loop.
+
+syntax: 
+    
+for <variable> in <iterative value>:
+    statement_1
+    for <variable> in <iterative value>:
+        statement_1
+        statement_2
+    
+
+while <condition>:
+    statemnt_1 
+    while <condition>:
+        statement_1
+        statement_2 
+        
     
 
 
+for i in range(4): # 0, 1, 2, 3
+    for j in range(4): # 0, 1, 2, 3
+        print(f"i={i}  j={j}")
+              
+              
+cartesian product 
+
+1   4 5 6
+2   4 5 6
+3   4 5 6           
+        
+ui = 4
+# 
+
+*
+* *
+* * * 
+* * * *
+
+n = int(input("Enter a number: "))
+
+for i in range(1, n+1): # 1 to n-1
+    for j in range(1, i+1):
+        print("*", end = ' ')
+    print()
+    
+
+
+n = int(input("Enter a number: "))
+for i in range(1, n+1): # 1, 2, 3, 4
+    print('* ' * i)
+    
+    
+
+
+
+
+
+
+
+# 
+ui = 4
+
+          *
+         * *
+        * * *
+       * * * *
+       
+
+n = int(input("Enter a number: ")) 
+
+for i in range(1, n+1):
+    print(' ' * (n-i), end='' ) 
+    print('* ' * i)
+
+
+#  Transfer statement :
+
+1. Break 
+2. continue 
+else 
+3. Pass 
+
+     
+       
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
