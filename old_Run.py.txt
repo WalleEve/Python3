@@ -6106,10 +6106,420 @@ for i in range(1, n+1):
 else 
 3. Pass 
 
-     
+------------------------------------------------------------------------------------------------------------
+
+                                            22 Sep 2021
+------------------------------************************************------------------------------------------     
        
  
-  
+# Transfer Statement: 
+
+    
+1. Break 
+2. Continue 
+3. Pass 
+
+# Break 
+
+Loop 
+
+while 
+
+for 
+
+
+condition statement 
+
+# When we use break statement inside loops to break loop execution based on some condition 
+
+for <variable> in <iterable>:
+    if <condition>:
+        statement 
+    elif <condition>:
+        break 
+    else:
+        statement 
+
+
+
+for i in range(1, 9): # 1..8
+    if i  < 6:
+        print("Uma Please continue your office work")
+    elif i == 7:
+        print("Today is sunday")
+        break 
+    else:
+        print("Uma today is half day")
+
+
+
+for i in range(10): # 0-9
+    if i == 7:
+        print("You have worked very hard take a break")
+        break 
+    print(i)
+
+
+
+
+for i in range(10): # 0-9
+    if i == 7:
+        print("You have worked very hard take a break")
+        break 
+    print(i)
+    
+print("Hi uma")
+
+
+# loan 
+
+bajab finance bard: 
+
+100000 
+
+if item > 50000: stop {pan varify} 
+
+
+item = [100, 300, 500, 60000, 4000, 10000, 25000 ]
+
+for i in item:
+    if i > 50000:
+        print("Sorry we can not process this you have to verify Pan")
+        break 
+    else:
+        print(f"Processing..{i}")
+
+        
+# Continue 
+
+# We can use continue statement to skip current iteration and continue next iteration 
+
+for i in range(10):
+    if i % 2 == 0: 
+        print("Print nothing")
+        continue 
+        print("Continue Loop")
+    
+    print(i) # 10 
+    
+# 
+0
+1
+PN
+2
+3
+PN
+4
+
+item = [100, 300, 500, 60000, 4000, 10000, 25000 ]
+
+for i in item:
+    if i > 50000:
+        print("Sorry we can not process this you have to verify Pan")
+        continue 
+    
+    print(f"Processing..{i}")
+    
+    
+
+marks = [70, 80, 0, 50, 0, 30]
+
+for i in marks:
+    if i == 0:
+        print("Hey how can we divide with zero.. just skipping")
+        continue 
+    print(f"{100 // i } ")
+    
+
+
+# LOOPS WOITH ELSE BLOCK 
+
+inside loop execution, if break statement not executed, then only else part will be executed. 
+
+else means loop without break 
+
+    
+cart = [10, 20, 30, 40, 50]
+
+for i in cart:
+    if i >=500:
+        print("We can not process this order")
+        break 
+    print("Item processing.. ", i)
+    
+else:
+    print("Congrats.. all items are processed successfully.")
+    
+ 
+cart = [10, 20, 30, 600, 40, 50]
+
+for i in cart:
+    if i >=500:
+        print("We can not process this order")
+        break 
+    print("Item processing.. ", i)
+    
+else:
+    print("Congrats.. all items are processed successfully.")    
+
+    
+    
+cart = [10, 20, 30, 600, 40, 50]
+
+for i in cart:
+    if i >=500:
+        print("We can not process this order")
+        continue 
+    print("Item processing.. ", i)
+    
+else:
+    print("Congrats.. all items are processed successfully.")          
+
+
+# PASS 
+
+
+for i in range(10):
+    pass 
+
+print("Hello")
+
+def adds(number1, number2):
+    pass 
+
+
+adds(10, 30)
+
+
+parent calss 
+    def asbtract m1():
+        
+chiuld class inharit parent calss 
+    def m1():
+        body 
+        
+
+uma PAPA (business) # Job 
+
+uma : business # start business 
+
+
+Q: what is the difference between for loop and while loop 
+Q: how many types of loop we can create 
+Q: How to exit from the loop 
+Q: How to skip some iteration inside a loop 
+Q: when else part will be execute in loops 
+
+
+         
+ ------------------------------------------------------------------------------------------------------------
+
+                                            29 Sep 2021
+------------------------------************************************------------------------------------------ 
+
+# del statement:
+
+if 
+if else 
+infinit loop 
+    
+data type 
+    . number 
+    . string 
+    . tuple 
+    . list 
+    . dictionary 
+    . set 
+    
+conditional statement 
+if 
+
+if else:
+    
+if 
+elif 
+else 
+
+looping 
+for loop :
+
+while loop: 
+    
+. Transfer / control statement 
+. break 
+. continue 
+. else 
+. pass
+
+del 
+-------------
+
+x = 10 
+print(x)
+del x 
+print(x)
+
+a = 'uma sanker'
+del a[0] # TypeError: 'str' object doesn't support item deletion
+print(a)
+del a
+print(a)
+
+a = ['uma', 'sadhana', 'tanjima']
+del a[0]
+print(a)
+
+del a 
+print(a)
+
+
+a = 10 
+
+del a 
+
+a = None
+
+
+#  String 
+
+any sequence of character within either single quote or double quote is consider as a string.
+
+syntax: 
+a = "uma" # string 
+b = 'uma' # string 
+c = "10" # string 
+d = "10.5" # string 
+    
+print(type(a))    
+
+a = """
+uma 
+sanker 
+palai 
+"""
+
+print(a)
+
+a = " uma \
+    sanker \
+        palai"
+        
+print(a)
+
+
+
+
+a = "uma sanker palai"
+
+# How to access character of a string 
+
+we can access characters of a string by using two ways:
+
+1. by using index 
+2. by using slicing operator 
+
+index can be positive or negative 
+
+a = "uma sanker palai"
+
+print(a[5])
+
+# Q: Write a program to accept string from the 
+# keyboard and didplay its characters by index wise(both positive and negative index)
+
+a = "u m a s a n k e r "
+     0
+    -10
+     
+     
+output: positive index: 0 and negative index: -10 | value: u 
+        positive index: 1 and negative index: -9  | value: m 
+
+
+name = input("Enter your name: ")
+
+for i in range(0, len(name)):
+    print(f"positive index: {i} and negative index: {(len(name)-i) * -1} | value: {name[i]} ")
+    
+    
+# Slicing Operater: 
+    
+value_name[begining_index:end_index:step] 
+
+a = "uma sanker palai"
+
+print(a[4:10:1])
+
+print(a[::-1])
+
+
+# len() 
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
