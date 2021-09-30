@@ -47,17 +47,38 @@ Show Answer
 Q6. Write a program to print table of a number accepted from user.
 Show Answer
 
-
+"""
 Q7. Write a program to display product of the digits of a number accepted from the user.
-Show Answer
 
+
+num=int(input("Enter any number"))
+p=1
+while(num):
+   r=num%10
+   p=p*r
+   num=num//10
+print("Product of digits is",p)
+"""
 
 Q8. Write a program to find the factorial of a number.
-Show Answer
+
+Ans.
+num=int(input("Enter any number"))
+f=1
+for i in range(1,num+1):
+    f=f*i
+print("Factorial is",f)
 
 
 Q9. Write a program to find the sum of the digits of a number accepted from user
-Show Answer
+Ans.
+num=int(input("Enter any number"))
+s=0
+while(num):
+   r=num%10
+   s=s+r
+   num=num//10
+print("Sum of digits is",s)
 
 
 Q10. Write a program to check whether a number is prime or not.
