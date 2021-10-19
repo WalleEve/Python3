@@ -6644,6 +6644,298 @@ if flag == False:
     print("Not Found!")    
 
 
+# Find:
+    
+str = "uma sanker palai"  # a
+print(str.find('z'))
+print(str.rfind('z'))
+
+
+# index 
+
+str = "uma sanker palai"  
+
+print(str.index('z'))
+print(str.rindex("z"))
+
+
+
+# Program to display all possible of substring in a given main string 
+ 
+str1 = input("Enter a strting: ")
+sub = input("Enter a search string: ")
+
+a = len(str1) 
+pos = -1 
+flag = False 
+
+while True:
+    pos = str1.find(sub, pos+1, a)
+    if pos == -1:
+        break
+    print("Substring found at position ", pos )
+    flag = True
+    
+if flag == False:
+    print("Substring not found")
+
+
+# FOR 
+
+str1 = input("Enter a strting: ")
+sub = input("Enter a search string: ")
+n = len(str1)
+indx = -1
+
+for i in str1:
+    indx = indx + 1 
+    if sub == i:
+        print(indx)
+ 
+
+        
+-------------------------------------------------------------------------------------------------------------
+
+                                            18 OCT 2021
+------------------------------************************************------------------------------------------ 
+        
+  
+# Count 
+
+a = 'sadhana behera mca bhadrak'
+
+print(a.count('a'))
+print(a.count('ad'))
+print(a.count('a', 19)) 
+print(a.count('a', 19, 22)) 
+
+
+# Replacing :
+    
+a = 'sadhana behera mca bhadrak' # immutable  
+r = 'chandbali'
+
+x = a.replace('bhadrak', r)
+
+print(x)
+
+
+# Splitting:
+    
+We can split the given string according to specified separator by sing split() method.
+
+l = s.split(separator)
+
+The default separator is space. 
+The return type of split() method is List 
+
+a = 'sadhana behera mca bhadrak'
+l = a.split()
+print(l)
+
+, -, 'a'
+
+l = a.split('a')
+print(l)
+
+# Join of String:
+We can join a group of strings (list or tuple) with the given separator.
+
+s = seperator.join(group of strings)
+separator should be string type 
+the return type of a join() method is string.
+
+t = ('uma', 'sadhana', "tanjima", "acer") # Tuple 
+s = '-'.join(t)
+print(s)
+
+t = ('uma', 'sadhana', "tanjima", "acer") # Tuple 
+j = ("sayed", 'dell')
+s = j.join(t) # AttributeError: 'tuple' object has no attribute 'join'
+print(s)
+
+
+
+
+        
+-------------------------------------------------------------------------------------------------------------
+
+                                            19 OCT 2021
+------------------------------************************************------------------------------------------ 
+
+
+
+
+# changing Case if a String:
+
+# uma sanker 
+1. upper() #  UMA
+2. lower() # uma
+3. title() # Uma Sanker Palai
+4. swapcase() # uMA sANKER paLAI
+5. capitalize() # Uma sanker 
+
+
+
+
+# To Check type of characters present in a string:
+
+str = "uma101"
+1. isalnum():Returns True if all characters are alphanumeric(A-Z, a-z, 0-9)
+2. isalpha(): Returns True if all characters are only alphabet symbol(a-z, A-Z)
+3. isdigit(): Returns True if all the characters are digit only (0-9)
+4. islower(): Returns True if all the characters are lowes case alphabet.
+5. isupper(): Returns True if all the characters are upper case alphabet.
+6. istitle(): Return True if string is in title case  
+7. isspace(): Returns True if string contains only space.
+
+a = ' '
+print(a.isspace())
+
+
+
+s = input("Entry your full name: ")
+
+if s.isalnum():
+    print("Alpha numeric character")
+    if s.isalpha():
+        print("Alphabet character")
+        if s.lower():
+            print("Lowercase alphavbet character")
+        else:
+            print("Upper case alphabet character")
+    else:
+        print("it is a digit")
+elif s.isspace():
+    print("It is space charcter")
+else:
+    print("non space charcater")
+    
+    
+
+
+# Formatting the String:
+We can format the string with varibal e values by using replavcement operator{} and format() method .
+
+a = 1234 
+b = str(1234)
+print("my number="+ b)
+
+
+integer_year = 2019
+
+# A string version of year
+string_year = str(2019)
+ptiny(string_year)
+
+
+
+
+a = str(123)
+
+
+name = 'uma'
+salary = 50000
+age = 28 
+
+print("%s 's salary is %d and his age is {:s}".format(name, salary, age))
+print("{0}'s salary is {1} and his age is {2}".format(name, salary, age))
+
+print("{0}'s salary is {1} and his age is {2}".format(salary, age, name))
+
+print("{x}'s salary is {y} and his age is {z}".format(y = salary, z = age, x = name))
+
+# fstring 
+
+print(f"{name.upper()}'s salary is {salary} and his age is {age}")
+
+# 
+
+# LIST Data type
+
+l1 = [] # empty list 
+l2 = list()  # empty list 
+
+print(l1, l2)
+
+lst = input("Enter list")
+print(lst)
+print(type(lst))
+
+lst = eval(input("Enter list"))
+print(lst)
+print(type(lst))
+
+# list() 
+
+2, 4, 6, 8, 10
+
+l = list(range(2, 11, 2))
+print(l)
+print(type(l))
+
+l = list(range(2, 11, 2))
+print(l)
+print(type(l))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

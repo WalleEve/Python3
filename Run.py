@@ -1,123 +1,128 @@
-# MEMBERSHIP OPERATOR: 
+# Find:
     
-in 
-
-s = "uma sanaker"
-subs = 'a'
-
-if subs in s:
-    print(f" {subs} found in {s}")
-else:
-    print(f"{subs} not found in {s}")
-    
-    
-    
-# Comparison of string: 
-    
-<
->
-<=
->=
-==
-!= 
+str = "uma sanker palai"  # a
+print(str.find('z'))
+print(str.rfind('z'))
 
 
-s1 = input("Enter first string: ")
-s2 = input("Enter second string: ")
+# index 
 
-if s1 == s2:
-    print("Both string are eqal!")
-elif s1 > s2:
-    print(f" {s1} is greater than {s2}")
-elif s1 < s2:
-    print(f" {s1} is smaller than {s2}")
-else:
-    print("Hi")
-    
-    
-# Removing Space from the String: 
-    
-we can use 3 methods to remove space from a string 
-1. rstrip() # TO remove space at the right hand side 
-2. lstrip() # To remove space at the left hand side 
-3. strip() # To remvoe space at both the side 
+str = "uma sanker palai"  
+
+print(str.index('z'))
+print(str.rindex("z"))
 
 
-city = input("Enter your city: ")
 
-city = city.strip()
-if city == "Bhubaneswar":
-    print("is a temple city")
-elif city == "Hyderabad":
-    print("nijam city")
-elif city == "Banglore":
-    print("Smart city")
-elif city == "chenni":
-    print("larg city")
-else:
-    print("unable to find your city")
-    
+# Program to display all possible of substring in a given main string 
  
-#  Finding substring: 
-    
-we can use 4 method 
+str1 = input("Enter a strting: ")
+sub = input("Enter a search string: ")
 
-Forward direction: 
-    find()
-    index()
-    
-backward: 
-    rfind()
-    rindex()
-    
- Find: 
- 
-string.find(substring)
-     
-s = "uma sanker palai"
-
-print(s.find('k'))
-print(s.find('z'))
-
-print(s.find('a'))
-print(s.rfind('a'))
-
-s.find(subs , begin , end) 
-
-s = "uma sanker palai"
-
-pos = s.find('z', 0, len(s))
-print('pos: ',pos)
-
-
-s = "uma sanker palai"
-
-print(s.index('k'))
-print(s.index('z'))
-
-print(s.index('a'))
-print(s.rindex('a'))
-
-
-# Write a program to display all position of substring in a given string 
-
-
-us = input("Enter main string: ")  # sadhana
-ss = input("Enter search string: ") # a  1, 4, 6
-
+a = len(str1) 
+pos = -1 
 flag = False 
-pos  = -1
-n  = len(us) # 6
 
-while True: 
-    pos = us.find(ss, pos+1, n) # us.find('z', 0, 10)  # -1
+while True:
+    pos = str1.find(sub, pos+1, a)
     if pos == -1:
-        break 
-    print("Found at position: ", pos) 
+        break
+    print("Substring found at position ", pos )
     flag = True
-        
+    
 if flag == False:
-    print("Not Found!")    
+    print("Substring not found")
+
+
+# FOR 
+
+str1 = input("Enter a strting: ")
+sub = input("Enter a search string: ")
+n = len(str1)
+indx = -1
+
+for i in str1:
+    indx = indx + 1 
+    if sub == i:
+        print(indx)
+        
+  
+# Count 
+
+a = 'sadhana behera mca bhadrak'
+
+print(a.count('a'))
+print(a.count('ad'))
+print(a.count('a', 19)) 
+print(a.count('a', 19, 22)) 
+
+
+# Replacing :
+    
+a = 'sadhana behera mca bhadrak' # immutable  
+r = 'chandbali'
+
+x = a.replace('bhadrak', r)
+
+print(x)
+
+
+# Splitting:
+    
+We can split the given string according to specified separator by sing split() method.
+
+l = s.split(separator)
+
+The default separator is space. 
+The return type of split() method is List 
+
+a = 'sadhana behera mca bhadrak'
+l = a.split()
+print(l)
+
+, -, 'a'
+
+l = a.split('a')
+print(l)
+
+# Join of String:
+We can join a group of strings (list or tuple) with the given separator.
+
+s = seperator.join(group of strings)
+separator should be string type 
+the return type of a join() method is string.
+
+t = ('uma', 'sadhana', "tanjima", "acer") # Tuple 
+s = '-'.join(t)
+print(s)
+
+t = ('uma', 'sadhana', "tanjima", "acer") # Tuple 
+j = ("sayed", 'dell')
+s = j.join(t) # AttributeError: 'tuple' object has no attribute 'join'
+print(s)
+
+
+
+
+
+
+
+
+
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
