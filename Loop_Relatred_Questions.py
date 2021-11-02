@@ -6,7 +6,8 @@ Created on Thu Sep 23 06:38:32 2021
 """
 
 # LOOP RELATED QUESTIONS:
-    
+ 
+wish()
     
 Q1. Write the output of the following:
 
