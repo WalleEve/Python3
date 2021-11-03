@@ -261,28 +261,93 @@ wish()
 
 
 
+
 # Parameters 
 
 
+uname = input("Enter your name: ")
+
+if uname = 'uma':
+    print("Hello uma")
+
+
+
+def wish():
+    print("Hello Good Morning")    
     
+wish()
+
+a = wish()
+print(a)
+
+
+def wish(name):
+     print("Hello", name, "Good Morning!")
+    
+   
+    
+wish('uma')  
+wish('sadhana')  
+wish("Tanjima")
+
+
+
+
+
+def quares(number):
+    print("The sqare of", number, "is", "number * number")
     
 
+unum = eval(input("Enter a number: "))
+result = quares(unum)
+print(result)
+print(unum)
 
 
+# Return Statement: 
+    
+Function can take a input value as parameter and execute business logic, and returns output to the 
+caller with return statement. 
+
+def quares(number):
+    sqr = number * number 
+    return sqr
+
+unum = eval(input("Enter a number: "))
+quares(unum)
+#print(result)
+print(unum)
 
 
+# Write a function to accept 2 numbers as input and return sum. 
 
+def mysum(v1, v2):
+    sum1 = v1 + v2
+    return sum1 
 
+v1 = eval(input("Enter first number"))
+v2 = eval(input("Enter Second number"))
 
+msum = mysum(v1, v2)
+print(msum)
 
+def mysum(v1, v2):
+    totalsum = v1 + v2 
+    return totalsum 
 
+a = eval(input("Enter first number"))
+b = eval(input("Enter Second number"))
+sumf = mysum(a, b)
+print(sumf)
 
+def mysum(a, b):
+    return (a + b)
 
+v1 = eval(input("Enter first number"))
+v2 = eval(input("Enter Second number"))
 
-
-
-
-
+totalsum = mysum(v1, v2)
+print(totalsum)
 
 
 
