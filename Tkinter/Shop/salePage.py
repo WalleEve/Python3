@@ -85,7 +85,7 @@ class Sales:
 		cursor = self.conn.cursor()
 		sql = "select * from " + table_name
 		cursor.execute(sql)
-		rows = cur.fetchall()
+		rows = cursor.fetchall()
 		return rows
 		"""
         if len(rows) !=0:
@@ -96,13 +96,15 @@ class Sales:
         conn.close()"""
 
 	def fetch_data(self):
+		pass
+		"""
 		tableData = self.table_conn(current_transaction)
 		if len(tableData) !=0:
 			self.Sales_Table.delete(*self.Sales_Table.get_children()
 			for row in tableData:
 				self.Sales_Table.insert('',END, values=row)
 			self.conn.commit()
-			self.conn.close()
+			self.conn.close()"""
 
 
 

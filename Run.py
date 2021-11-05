@@ -1,365 +1,175 @@
-# FUNCTION:
+# FUNCTION RETURN:
     
+# Returning multiple values from a Function
 
-print(a) 
+# def keyword to create a function
+# sum_num function name 
+# a, b Parameter 
+def sum_num(a, b): 
+    res = a + b 
+    print(res) # print the value in console we can not store this the value using print statement in the colling environment  
+    return res # It return the value to the colling env , we can store the return value 
 
-a = "acer" 
 
-calss A{
-        public s void main(strargs[])
-        }
+x = 5 
+y = 6 
 
-
-multiple statement 
-
-regular 
-frequently 
-
-function 
-
-1: build in function 
-2. User define function 
-
-Note: Parmanently store 
-
-dictionary / metadata 
-
-x = 1
-if x:
-    a = 'lenovo' 
-    
-    
-
-print(a)
-
-main advantage: corde reusable  
-
-method 
-procedure 
-subroutines 
-
-
-1 Bilt in function:
-    
-
-
-l1 = eval(input("Enter first list: "))
-l2 = eval(input("Enter cecond list: "))
-l3 = eval(input("Enter third list: "))
-a = []
-suml1 = 0
-for i in l1:
-    suml1 = suml1 + i 
-a.append(suml1)
-suml2 = 0
-for j in l2:    
-    suml2 = suml2 + j 
-a.append(suml2)    
-suml3 = 0 
-for k in l3:
-    suml3 = suml3 + k 
-a.append(suml3)  
-  
-flag = '' 
-if suml1 > suml2 and suml1 > suml3:
-    flag = l1 
-elif suml2 > suml1 and suml2 > suml3:
-    flag = l2 
-else:
-    falg = l3 
-    
-print(f"{a} The greated list is {flag}")
-
-
-
-
-a = [1, 4, 6]
-b = [5, 1, 3]
-c = [7, 1, 2]
-
-sa = sum(a)
-sb = sum(b)
-sc = sum(c)
-a = [sum(a), sum(b), sum(c)]
-
-print(sa, sb, sc)
-maxlist = max(a)
-print(a, maxlist)
-
-
-# PYTHON BUILT IN FUNCTION 
-
-A
-abs()
-aiter()
-all()
-any()
-anext()
-ascii()
-
-B
-bin()
-bool()
-breakpoint()
-bytearray()
-bytes()
-
-C
-callable()
-chr()
-classmethod()
-compile()
-complex()
-
-D
-delattr()
-dict()
-dir()
-divmod()
-
-E
-enumerate()
-eval()
-exec()
-
-F
-filter()
-float()
-format()
-frozenset()
-
-G
-getattr()
-globals()
-
-H
-hasattr()
-hash()
-help()
-hex()
-
-I
-id()
-input()
-int()
-isinstance()
-issubclass()
-iter()
-L
-len()
-list()
-locals()
-
-M
-map()
-max()
-memoryview()
-min()
-
-N
-next()
-
-O
-object()
-oct()
-open()
-ord()
-
-P
-pow()
-print()
-property()
-
-
-
-
-R
-range()
-repr()
-reversed()
-round()
-
-S
-set()
-setattr()
-slice()
-sorted()
-staticmethod()
-str()
-sum()
-super()
-
-T
-tuple()
-type()
-
-V
-vars()
-
-Z
-zip()
-
-_
-__import__()
-
-
-# USER DEFINE FUNCTION:
-
-
-function always return a value 
-
-1 return value 
-
-multiple return value  
-
-a = 1
-
-b = 1
-
-c = 1
-
-if a:
-    a = a + 10 # exit from the program 
-
-if b:
-    b = b + 20
-
-if c:
-    c = c + 30
-    
-
-return a , b, c 
-    
-print(a, b, c)
-
-# SYNTAX: 
-    
-    
-def function_name(parameters):
-    """ doc string """
-    statement 
-    .
-    .
-    return value 
-
-# oracle 
-in parameter out parameter inout parameter 
-
-def (mandatory):
-    
-return(optional)
-
-# Example 1 
-
-def wish():
-    print("Hello Good Morning")
-    
-    
-# call the function 
-
-wish()
-
-
-
-
-# Parameters 
-
-
-uname = input("Enter your name: ")
-
-if uname = 'uma':
-    print("Hello uma")
-
-
-
-def wish():
-    print("Hello Good Morning")    
-    
-wish()
-
-a = wish()
-print(a)
-
-
-def wish(name):
-     print("Hello", name, "Good Morning!")
-    
-   
-    
-wish('uma')  
-wish('sadhana')  
-wish("Tanjima")
-
-
-
-
-
-def quares(number):
-    print("The sqare of", number, "is", "number * number")
-    
-
-unum = eval(input("Enter a number: "))
-result = quares(unum)
+result = sum_num(x, y) # x, y argument 
 print(result)
-print(unum)
 
 
-# Return Statement: 
+def calc(a, b): 
+    res_sum = a + b 
+    res_sub = a - b
+    res_mul = a * b
+    #print(res) # print the value in console we can not store this the value using print statement in the colling environment  
+    return res_sum, res_sub, res_mul  # It return the value to the colling env , we can store the return value 
+
+
+x = 5 
+y = 6 
+
+result = calc(x, y) # x, y argument 
+print(result)
+
+rSum, rSub, rMul = calc(x, y)
+print(f"SUM: {rSum} SUB: {rSub}  MUL: {rMul}")
+
+
+def calc(x, y):
     
-Function can take a input value as parameter and execute business logic, and returns output to the 
-caller with return statement. 
+    return x+y, x-y, x*y
 
-def quares(number):
-    sqr = number * number 
-    return sqr
+a = 10
+b = 30 
+res = calc(a, b)
+print(res)    
+    
 
-unum = eval(input("Enter a number: "))
-quares(unum)
-#print(result)
-print(unum)
+def calc(x, y):
+    print(x + y)
+    return 
 
-
-# Write a function to accept 2 numbers as input and return sum. 
-
-def mysum(v1, v2):
-    sum1 = v1 + v2
-    return sum1 
-
-v1 = eval(input("Enter first number"))
-v2 = eval(input("Enter Second number"))
-
-msum = mysum(v1, v2)
-print(msum)
-
-def mysum(v1, v2):
-    totalsum = v1 + v2 
-    return totalsum 
-
-a = eval(input("Enter first number"))
-b = eval(input("Enter Second number"))
-sumf = mysum(a, b)
-print(sumf)
-
-def mysum(a, b):
-    return (a + b)
-
-v1 = eval(input("Enter first number"))
-v2 = eval(input("Enter Second number"))
-
-totalsum = mysum(v1, v2)
-print(totalsum)
+a = 10 
+b = 30 
+r = calc(a, b)
+print(r)
+    
 
 
+def calc(x, y): # Parameter 
+    print(f"x{x}") 
+    print(f"y{y}")
+    print(f"x + y: {x + y}") # 40
+
+# Function always returns values 
+# Function always return None if there is no Return statement in the function    
+
+a = 10 
+b = 30 
+r = calc(a, b) # arguemnt 
+print(r)
+
+
+# TYPES OF ARGUMENT:
+#1: Formal Argument 
+#2: Actual Argument 
+
+def calc(x, y):
+    print(x + y)
+    return  x + y
+
+a = 10 
+b = 30 
+r = calc(a, b) # Formal Argument
+print(r)   
+
+# a, b : FORMAL ARGUMENT 
+# 10, 30 : ACTIUL Argument 
+
+
+def calc(x, y):
+    print(x + y)
+    return x + y
+
+
+r = calc(10, 30) # Actual  Argument
+print(r) 
+
+# There are 4 types of argument are allowed in Python: 
+
+#1. Positional Argument 
+#2. Keyword Argument 
+#3. Default Argument 
+#4. Variable length argument 
+
+
+# Positional Argument
+
+def calc(x, y):
+    print(x + y)
+    return  x + y
+
+a = 10 
+b = 30 
+r = calc(a, b) 
+print(r) 
 
 
 
+def message(name, age):
+    print(f"Hello {name} your age is {age}")
+    if age >=18:
+        return "You are Eligible to Vote"
+    else:
+        return "Sorry your age is under eligible list."
+
+name = input("Inser your name: ")
+age = eval(input("Enter your age: "))
+
+msg = message(name, age)
+print(msg)
+
+
+def message(name, age):
+    print(f"Hello {name} your age is {age}")
+    if age >=18:
+        return "You are Eligible to Vote"
+    else:
+        return "Sorry your age is under eligible list."
+
+name = input("Inser your name: ")
+age = eval(input("Enter your age: "))
+
+msg = message(age, name)
+print(msg)
+
+    
 
 
 
-
-
-
-
-
-
-
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
