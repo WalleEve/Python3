@@ -8027,9 +8027,146 @@ print(msg)
 
     
 
+-----------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+
+                                            08 NOV 2021
+------------------------------************************************------------------------------------------ 
+
+
 
 
         
+# ARGUMENTS:
+1 formal 
+2 actual 
+
+4 types 
+1. positional argument 
+2. keyward argument 
+3. default argument 
+4. variable length argument     
+
+# POSITIONAL ARGUMENT:
+    
+def adds(a, b):
+    return a - b
+
+x = 10 
+y = 20
+c = 40
+res = adds(y, x)
+print(res)
+
+# KEYWORD ARGUMMENT
+
+We can pass argument values by keyword by parameter name 
+
+def wish(name, msg):
+    print("Hello ", name, msg) 
+    
+wish(name="uma", msg="Good morning ")
+wish( msg="Good morning ", name="uma")
+wish( msg="Good morning ", nam="uma") # TypeError: wish() got an unexpected keyword argument 'nam'
+
+# 
+We can use both positinal argument and keyword argument simultaniously. 
+But fitst we have to take positional argument then keyword argument.
+
+
+wish('uma', 'most valuable emp') # actial value / positional argument 
+a = 'uma' 
+b = 'Hello Good morning'
+wish(a, b) # formal / positional argument 
+wish(b, a)
+
+
+wish(name= "uma", msg="Hello How are you ")
+wish(msg= "Hello how are you", name = "uma")
+ 
+n = "uma"
+
+wish("uma", msg="Hello how are you")
+wish(name="uma", "How are you") # SyntaxError: positional argument follows keyword argument
+
+wish("How are you", name="uma" ) # TypeError: wish() got multiple values for argument 'name'
+
+# DEFAULT ARGUMENT:
+    
+def wish(name, msg="Hi how are you"):
+    print("Hello", name, msg)
+    
+wish('uma')
+wish('uma', 'You are not a good person!')
+wish(name="uma")
+wish(name="uma", "Pagal ho gaya hai") # SyntaxError: positional argument follows keyword argument
+
+
+# VARIABLE LENGTH ARGUMNET:
+    
+def cal(a, b):
+    return a + b 
+
+Sometime we can pass variable number of arguments to our function, such type of arguments are called variable length argument.
+
+We can decalre a varibale length argument with * symbol 
+
+syn: def func_name(*n):
+        statemnt 
+        
+        
+        
+def sum(*uma):
+    total = 0 
+    for i in uma:
+        total = total+i
+    print(total)
+    
+sum(1, 2, 3, 4, 5, 6,7 ) # Tuple 
+
+
+def sum(*uma):
+    total = 0 
+    print(uma[1])
+    for i in uma:
+        total = total+i
+    print(total)
+    
+sum(1, 2, 3, 4, 5, 6,7 ) # Tuple 
+
+
+def rsult(name, *marks):
+    print("Hello", name)
+    total  = 0
+    for i in marks:
+        total = total + i 
+    print("You scored ", total , " out of 500")
+
+
+rsult("uma", 10, 20, 3, 5, 6, 70)
+
+def rsult( *marks, name):
+    print("Hello", name)
+    total  = 0
+    for i in marks:
+        total = total + i 
+    print("You scored ", total , " out of 500")
+
+
+rsult(10, 20, 3, 5, 6, 70, name="uma")
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
