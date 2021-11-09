@@ -8160,6 +8160,121 @@ rsult(10, 20, 3, 5, 6, 70, name="uma")
 
 
 
+-----------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------
+
+                                            09 NOV 2021
+------------------------------************************************------------------------------------------ 
+
+
+
+# Parameter:
+formal parameter 
+actual parameter 
+
+# Arguments 
+1. positional argument 
+2. keyword argument 
+3. default argument 
+4. variable length argument 
+
+
+def great(*name, msg):
+    for i in name:
+        print("Hi", i, msg)
+        
+        
+great("uma", "sadhana", "tanjima", msg="Good Morning" ) 
+
+def great(msg, *name):
+    for i in name:
+        print("Hi", i, msg)
+        
+        
+great("Good Morning", "uma", "sadhana", "tanjima")
+   
+
+def great(msg, *name, year):
+    for i in name:
+        print("Hi", i, msg, year)
+        
+        
+great("Welcome to ", "uma", "sadhana", "tanjima", year=2021)
+
+
+# *ARGS
+# **KWARGS
+
+# KEYWORD VARIABLE LENGTH ARGUMENTS:
+Note: We can declare key word variable length arguments 
+For this we have to use ** 
+
+syn: def fun_name(**n):
+        statements 
+        
+
+
+def display(**kwargs):
+    for i, v in kwargs.items():
+        print(i, "=", v)
+        
+display("uma", "sadhana", "tanjima") # TypeError: display() takes 0 positional arguments but 3 were given
+
+display(name="uma", address="Bhadrak", job="Software Eng", sal=50000)
+
+
+def f1(name, clas, year, **marks):
+    a = dict()
+    for sub, mrks in marks.items():
+        a[sub] = mrks 
+        
+    print("Hello", name, "Result for ", clas, a, " For year: ", year)
+
+f1("uma", "3 sem", 2021, math=90, eng=60, his=70)
+      
+
+
+# TEST CASE 
+
+def f(arg1, arg2, arg3=4, arg4=8):
+    print(arg1, arg2, arg3, arg4)
+
+
+f(3, 6) # 3, 6, 4, 8 
+f(10, 20, 30, 60) # 10, 20, 30, 60 
+f(25, 50, arg4=100) # 25, 50, 4, 100
+f(arg4=2, arg1=3, arg2=4) # 3, 4, 4, 2 
+f() # Error 
+f(arg3=10, arg1=3, 20, 30) # Error 
+f(4, 5, arg2=6) # Error 
+f(4, 5, arg3=5, arg5=6) #  Error 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
